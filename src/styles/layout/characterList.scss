@@ -1,0 +1,23 @@
+@import '../core/variables';
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  justify-content: center;
+  .characterLi {
+    border: whitesmoke solid 5px;
+  }
+  .imgApi {
+    width: 195px;
+
+    transition: width 0.1s, box-shadow 0.25s;
+    &:hover {
+      width: 200px;
+    }
+  }
+  .childrenData {
+    width: 21ch;
+    margin: auto;
+  }
+}

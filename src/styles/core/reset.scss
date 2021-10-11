@@ -1,0 +1,38 @@
+.body {
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+  background-image: linear-gradient(180deg, #830909, #380202);
+  box-sizing: border-box;
+  // background-image: url(../../images/fondo.png);
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  color: inherit;
+}
+
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+A {
+  text-decoration: none;
+}
