@@ -21,6 +21,7 @@ const callToApi = () => {
         };
       });
       console.log(characters);
+
       return characters;
     });
 };

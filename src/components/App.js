@@ -1,8 +1,15 @@
 import '../styles/App.scss';
+import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import callToApi from '../services/callToApi';
 import Form from './Form';
 import CharacterList from './CharacterList';
+import CharacterDetail from './CharacterDetail';
+import Header from './Header';
+import Footer from './Footer';
+import NotFoundPage from './PageNotFound';
+import FormButton from './FormButton';
+import QuizHat from './QuizHat';
 
 // Fichero src/components/App.js
 
@@ -17,6 +24,16 @@ const App = () => {
       setData(response);
     });
   }, []);
+
+  const routeData = useRouteMatch('/quiz/:id');
+  const buttonId = routeData !== null ? routeData.params.id : '';
+  const selectedButton = data.find((data) => data.id === parseInt(buttonId));
+  // const routeDataCharacter = useRouteMatch('/character/:id');
+  // const characterId = routeDataCharacter !== null ? routeData.params.id : '';
+  // const characterDetail = data.find(
+  //   (data) => data.id === parseInt(characterId)
+  // );
+
   const filteredCharacter = data
     .filter((character) =>
       character.name
@@ -42,14 +59,19 @@ const App = () => {
   // };
   return (
     <div>
-      <h1>
-        Harry Potter y animales fantásticos<span> wiki</span>
-      </h1>
-      <Form searchName={searchName} handleSearchName={handleSearchName} />
-      <ul>
-        <h2>Listado de personajes</h2>
+      <Header />
+      <Switch />
+      <Route exact path='/quiz/'>
+        <QuizHat quiz={selectedButton} />
+      </Route>
+      {/* <Route path='/character/:id'>
+        <CharacterDetail character={characterDetail} />
+      </Route> */}
+      <Route exact path='/'>
+        <Form searchName={searchName} handleSearchName={handleSearchName} />
         <CharacterList data={filteredCharacter} searchName={searchName} />
-        <li>
+        <FormButton data={filteredCharacter} />
+        {/* <li>
           Tarjeta que incluirá:
           <p>Nombre</p>
           <p>
@@ -64,19 +86,11 @@ const App = () => {
           <p>Mascota si tenia</p>
           <p>Casa de hogwarts o de magia</p>
           <p>Patronus</p>
-        </li>
-      </ul>
-      {/* <Route path='/contacto'></Route> */}
-      {/* <nav>
-        <ul>
-          <li>
-            <Link to='/'></Link>
-          </li>
-          <li>
-            <Link to='/contacto'></Link>
-          </li>
-        </ul>
-      </nav> */}
+        </li> */}
+        {/* <NotFoundPage />*/}
+      </Route>
+      <Switch />
+      <Footer />
     </div>
   );
 };
