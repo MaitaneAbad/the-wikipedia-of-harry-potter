@@ -1,0 +1,21 @@
+.quiz {
+  margin: 30px 0;
+  color: #fff;
+  text-transform: uppercase;
+  &__title {
+    margin: 10px;
+  }
+  &__subtitle {
+    margin: 5px;
+    font-size: 14px;
+  }
+  &__formButton {
+    margin: 30px 0;
+    &--input {
+      display: none;
+    }
+    &--img {
+      width: 20%;
+    }
+  }
+}
