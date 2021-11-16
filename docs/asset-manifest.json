@@ -1,20 +1,33 @@
 {
   "files": {
-    "main.css": "./static/css/main.dd4ce15a.chunk.css",
-    "main.js": "./static/js/main.9685b850.chunk.js",
-    "main.js.map": "./static/js/main.9685b850.chunk.js.map",
+    "main.css": "./static/css/main.b62732a7.chunk.css",
+    "main.js": "./static/js/main.ce58a6a2.chunk.js",
+    "main.js.map": "./static/js/main.ce58a6a2.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.7ad783a2.js",
     "runtime-main.js.map": "./static/js/runtime-main.7ad783a2.js.map",
-    "static/js/2.91f76876.chunk.js": "./static/js/2.91f76876.chunk.js",
-    "static/js/2.91f76876.chunk.js.map": "./static/js/2.91f76876.chunk.js.map",
+    "static/js/2.7a5c9d0c.chunk.js": "./static/js/2.7a5c9d0c.chunk.js",
+    "static/js/2.7a5c9d0c.chunk.js.map": "./static/js/2.7a5c9d0c.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.dd4ce15a.chunk.css.map": "./static/css/main.dd4ce15a.chunk.css.map",
-    "static/js/2.91f76876.chunk.js.LICENSE.txt": "./static/js/2.91f76876.chunk.js.LICENSE.txt"
+    "static/css/main.b62732a7.chunk.css.map": "./static/css/main.b62732a7.chunk.css.map",
+    "static/js/2.7a5c9d0c.chunk.js.LICENSE.txt": "./static/js/2.7a5c9d0c.chunk.js.LICENSE.txt",
+    "static/media/admitido.db980ec2.gif": "./static/media/admitido.db980ec2.gif",
+    "static/media/cat.e3612f93.jpg": "./static/media/cat.e3612f93.jpg",
+    "static/media/class.768ed279.gif": "./static/media/class.768ed279.gif",
+    "static/media/defence.d410b1e3.gif": "./static/media/defence.d410b1e3.gif",
+    "static/media/divination.ad9671f8.gif": "./static/media/divination.ad9671f8.gif",
+    "static/media/hat.bdb71a81.png": "./static/media/hat.bdb71a81.png",
+    "static/media/herbology.8cc8b2b1.gif": "./static/media/herbology.8cc8b2b1.gif",
+    "static/media/magicalCreatures.50f68266.gif": "./static/media/magicalCreatures.50f68266.gif",
+    "static/media/owl.603711fb.jpg": "./static/media/owl.603711fb.jpg",
+    "static/media/potions.ba2fd0c5.gif": "./static/media/potions.ba2fd0c5.gif",
+    "static/media/rat.075dc118.jpg": "./static/media/rat.075dc118.jpg",
+    "static/media/sortilegios.e86fe931.jpg": "./static/media/sortilegios.e86fe931.jpg",
+    "static/media/toad.7bc544f6.jpg": "./static/media/toad.7bc544f6.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.7ad783a2.js",
-    "static/js/2.91f76876.chunk.js",
-    "static/css/main.dd4ce15a.chunk.css",
-    "static/js/main.9685b850.chunk.js"
+    "static/js/2.7a5c9d0c.chunk.js",
+    "static/css/main.b62732a7.chunk.css",
+    "static/js/main.ce58a6a2.chunk.js"
   ]
 }
