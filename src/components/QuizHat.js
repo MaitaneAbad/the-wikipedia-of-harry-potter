@@ -412,7 +412,6 @@ const CharacterDetail = (props) => {
       hufflepuffPoints,
     ];
     console.log(housesPoints);
-    let houseIndex = 4;
     let winnerHousePoints = 0;
     // const winner = housesPoints.map((data) => {
     //   if (data === 9 || data > 9) {
@@ -420,17 +419,13 @@ const CharacterDetail = (props) => {
     //   }
     // });
     // console.log(winner);
-    for (let index = 0; index < housesPoints.length; index++) {
-      const element = housesPoints[index];
-      console.log(element);
-      if (element >= 9) {
-        console.log('estoy dentro el for y soy igual o mayor que 9');
-      }
-      if (element <= 8) {
-        console.log('estoy dentro del for y soy menor o igual que 8');
-      } else {
+    for (let i = 0; i < housesPoints.length; i++) {
+      if (housesPoints[i] > winnerHousePoints) {
+        winnerHousePoints = housesPoints[i];
+        console.log('estoy dentro el for y me da el numero más alto');
       }
     }
+    console.log(winnerHousePoints);
   };
 
   const handlePrevent = (ev) => {
