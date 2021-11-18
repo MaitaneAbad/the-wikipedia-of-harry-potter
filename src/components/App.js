@@ -4,10 +4,8 @@ import { useState, useEffect } from 'react';
 import callToApi from '../services/callToApi';
 import Form from './Form';
 import CharacterList from './CharacterList';
-import CharacterDetail from './CharacterDetail';
 import Header from './Header';
 import Footer from './Footer';
-import NotFoundPage from './PageNotFound';
 import FormButton from './FormButton';
 import QuizHat from './QuizHat';
 
@@ -18,19 +16,7 @@ import QuizHat from './QuizHat';
 const App = () => {
   const [data, setData] = useState([]);
   const [searchName, setSearchName] = useState('');
-  // atributos de la capa oculta de la red neuronal
-  let bravery = 0;
-  let friendship = 0;
-  let honour = 0;
-  let cunning = 0; //astucia
-  let ambition = 0;
-  let witness = 0;
-  let intelligence = 0;
-  let competition = 0;
-  let justice = 0;
-  let loyality = 0;
-  let hardWork = 0;
-  console.log(bravery);
+
   useEffect(() => {
     callToApi().then((response) => {
       setData(response);
@@ -74,20 +60,7 @@ const App = () => {
       <Header />
       <Switch />
       <Route exact path='/quiz/'>
-        <QuizHat
-          quiz={selectedButton}
-          bravery={bravery}
-          friendship={friendship}
-          honour={honour}
-          cunning={cunning}
-          ambition={ambition}
-          witness={witness}
-          intelligence={intelligence}
-          competition={competition}
-          justice={justice}
-          loyality={loyality}
-          hardWork={hardWork}
-        />
+        <QuizHat quiz={selectedButton} />
       </Route>
       {/* <Route path='/character/:id'>
         <CharacterDetail character={characterDetail} />

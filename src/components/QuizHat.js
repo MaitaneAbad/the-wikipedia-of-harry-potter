@@ -26,83 +26,108 @@ const CharacterDetail = (props) => {
   const [qualitie, setQualitie] = useState('');
   const [transport, setTransport] = useState('');
 
+  // atributos para contadores de la capa oculta de la red neuronal
+  const [bravery, setBravery] = useState(0);
+  const [friendship, setFriendship] = useState(0);
+  const [honour, setHonour] = useState(0);
+  const [cunning, setCunning] = useState(0); //astucia
+  const [ambition, setAmbition] = useState(0);
+  const [witness, setWitness] = useState(0);
+  const [intelligence, setIntelligence] = useState(0);
+  const [justice, setJustice] = useState(0);
+  const [competition, setCompetition] = useState(0);
+  const [loyality, setLoyality] = useState(0);
+  const [hardWork, setHardWork] = useState(0);
+
   const handlePet = (ev) => {
     setPet(ev.target.value);
     const value = ev.target.value;
     switch (value) {
       case 'lechuza':
-        props.cunning += 1;
-        props.witness += 1;
-        props.intelligence += 1;
-        props.justice += 1;
-        props.console.log('lechuza', props.cunning);
+        setCunning(cunning + 1);
+        setWitness(witness + 1);
+        setIntelligence(intelligence + 1);
+        setJustice(justice + 1);
+
         break;
       case 'rata':
-        props.cunning += 1;
-        props.competition += 1;
-        props.hardWork += 1;
-        props.loyality += 1;
-        props.ambition += 1;
+        setCunning(cunning + 1);
+        setCompetition(competition + 1);
+        setHardWork(hardWork + 1);
+        setHardWork(friendship + 1);
+        setAmbition(ambition + 1);
         break;
       case 'gato':
-        props.bravery += 1;
-        props.friendship += 1;
-        props.ambition += 1;
-        props.loyality += 1;
+        setBravery(bravery + 1);
+        setFriendship(friendship + 1);
+        setAmbition(ambition + 1);
+        setHardWork(hardWork + 1);
         break;
       case 'sapo':
-        props.friendship += 1;
-        props.justice += 1;
-        props.hardWork += 1;
-        props.honour += 1;
-        props.cunning += 1;
+        setFriendship(friendship + 1);
+        setJustice(justice + 1);
+        setHardWork(hardWork + 1);
+        setHonour(honour + 1);
+        setCunning(cunning + 1);
         break;
 
       default:
         break;
     }
   };
+  // console.log(intelligence);
+  // console.log(cunning);
+  // console.log(ambition);
+  // console.log(hardWork);
+  // console.log(honour);
+  // console.log(justice);
+  // console.log(witness);
+  // console.log(bravery);
+  // console.log(competition);
+  // console.log(friendship);
+  // console.log(loyality);
+
   const handleclassroom = (ev) => {
     setClassroom(ev.target.value);
     const value = ev.target.value;
     switch (value) {
       case 'defensa contra las artes oscuras':
-        props.witness += 1;
-        props.cunning += 1;
-        props.ambition += 1;
-        props.bravery += 1;
-        props.honour += 1;
-        props.intelligence += 1;
-        props.justice += 1;
+        setWitness(witness + 1);
+        setCunning(cunning + 1);
+        setAmbition(ambition + 1);
+        setBravery(bravery + 1);
+        setHonour(honour + 1);
+        setIntelligence(intelligence + 1);
+        setJustice(justice + 1);
         break;
       case 'pociones':
-        props.ambition += 1;
-        props.intelligence += 1;
-        props.hardWork += 1;
-        props.cunning += 1;
-        props.witness += 1;
+        setAmbition(ambition + 1);
+        setIntelligence(intelligence + 1);
+        setHardWork(hardWork + 1);
+        setCunning(cunning + 1);
+        setWitness(witness + 1);
         break;
       case 'cuidado de criaturas mágicas':
-        props.bravery += 1;
-        props.friendship += 1;
-        props.hardWork += 1;
-        props.loyality += 1;
+        setBravery(bravery + 1);
+        setFriendship(friendship + 1);
+        setHardWork(hardWork + 1);
+        setHardWork(hardWork + 1);
         break;
       case 'herbología':
-        props.friendship += 1;
-        props.witness += 1;
-        props.hardWork += 1;
-        props.intelligence += 1;
+        setFriendship(friendship + 1);
+        setWitness(witness + 1);
+        setHardWork(hardWork + 1);
+        setIntelligence(intelligence + 1);
         break;
       case 'adivinación':
-        props.cunning += 1;
-        props.competition += 1;
-        props.ambition += 1;
+        setCunning(cunning + 1);
+        setCompetition(competition + 1);
+        setAmbition(ambition + 1);
         break;
       default:
         break;
     }
-    console.log(props.ambition);
+    console.log(ambition);
   };
 
   const handleInvention = (ev) => {
@@ -110,21 +135,21 @@ const CharacterDetail = (props) => {
     const value = ev.target.value;
     switch (value) {
       case 'Turrón de hemorragia nasal':
-        props.bravery += 1;
+        setBravery(bravery + 1);
         break;
       case 'Orejas extensibles':
-        props.cunning += 1;
-        props.intelligence += 1;
-        props.ambition += 1;
+        setCunning(cunning + 1);
+        setIntelligence(intelligence + 1);
+        setAmbition(ambition + 1);
         break;
       case 'Pantano portátil':
-        props.hardWork += 1;
-        props.bravery += 1;
+        setHardWork(hardWork + 1);
+        setBravery(bravery + 1);
         break;
       case 'Filtro de amor':
-        props.friendship += 1;
-        props.justice += 1;
-        props.cunning += 1;
+        setFriendship(friendship + 1);
+        setJustice(justice + 1);
+        setCunning(cunning + 1);
         break;
       default:
         break;
@@ -135,34 +160,34 @@ const CharacterDetail = (props) => {
     const value = ev.target.value;
     switch (value) {
       case 'Imperio':
-        props.cunning += 1;
-        props.witness += 1;
-        props.ambition += 1;
+        setCunning(cunning + 1);
+        setWitness(witness + 1);
+        setAmbition(ambition + 1);
         break;
       case 'Bombarda':
-        props.bravery += 1;
-        props.honour += 1;
-        props.justice += 1;
+        setBravery(bravery + 1);
+        setHonour(honour + 1);
+        setJustice(justice + 1);
         break;
       case 'Obliviate':
-        props.intelligence += 1;
-        props.competition += 1;
-        props.cunning += 1;
+        setIntelligence(intelligence + 1);
+        setCompetition(competition + 1);
+        setCunning(cunning + 1);
         break;
       case 'Desmaius':
-        props.justice += 1;
-        props.loyality += 1;
+        setJustice(justice + 1);
+        setHardWork(hardWork + 1);
         break;
       case 'Expecto Patronum':
-        props.friendship += 1;
-        props.hardWork += 1;
-        props.honour += 1;
+        setFriendship(friendship + 1);
+        setHardWork(hardWork + 1);
+        setHonour(honour + 1);
         break;
       case 'Accio':
-        props.competition += 1;
-        props.ambition += 1;
-        props.cunning += 1;
-        props.justice += 1;
+        setCompetition(competition + 1);
+        setAmbition(ambition + 1);
+        setCunning(cunning + 1);
+        setJustice(justice + 1);
         break;
       default:
         break;
@@ -173,43 +198,43 @@ const CharacterDetail = (props) => {
     const value = ev.target.value;
     switch (value) {
       case 'Rubeus hagrid':
-        props.bravery += 1;
-        props.friendship += 1;
-        props.loyality += 1;
+        setBravery(bravery + 1);
+        setFriendship(friendship + 1);
+        setHardWork(hardWork + 1);
         break;
       case 'Minerva McGonagall':
-        props.intelligence += 1;
-        props.honour += 1;
-        props.justice += 1;
+        setIntelligence(intelligence + 1);
+        setHonour(honour + 1);
+        setJustice(justice + 1);
         props.cunning += 1;
-        props.ambition += 1;
+        setAmbition(ambition + 1);
         break;
       case 'Albus Dumbledore':
-        props.bravery += 1;
-        props.ambition += 1;
-        props.intelligence += 1;
-        props.cunning += 1;
+        setBravery(bravery + 1);
+        setAmbition(ambition + 1);
+        setIntelligence(intelligence + 1);
+        setCunning(cunning + 1);
         break;
       case 'Ojoloco Moody':
-        props.witness += 1;
-        props.justice += 1;
-        props.hardWork += 1;
-        props.ambition += 1;
+        setWitness(witness + 1);
+        setJustice(justice + 1);
+        setHardWork(hardWork + 1);
+        setAmbition(ambition + 1);
         break;
       case 'Severus Snape':
-        props.cunning += 1;
-        props.ambition += 1;
-        props.witness += 1;
+        setCunning(cunning + 1);
+        setAmbition(ambition + 1);
+        setWitness(witness + 1);
         break;
       case 'Remus Lupin':
-        props.bravery += 1;
-        props.friendship += 1;
-        props.honour += 1;
+        setBravery(bravery + 1);
+        setFriendship(friendship + 1);
+        setHonour(honour + 1);
         break;
       case 'Sybill Trelawney':
-        props.witness += 1;
-        props.competition += 1;
-        props.ambition += 1;
+        setWitness(witness + 1);
+        setCompetition(competition + 1);
+        setAmbition(ambition + 1);
         break;
       default:
         break;
@@ -220,16 +245,16 @@ const CharacterDetail = (props) => {
     const value = ev.target.value;
     switch (value) {
       case 'Zumo de calabaza':
-        props.friendship += 1;
+        setFriendship(friendship + 1);
         break;
       case 'Ranas de chocolate':
-        props.intelligence += 1;
+        setIntelligence(intelligence + 1);
         break;
       case 'Babosas de gelatina':
-        props.loyality += 1;
+        setHardWork(hardWork + 1);
         break;
       case 'Grageas Bertie Bott':
-        props.bravery += 1;
+        setBravery(bravery + 1);
         break;
       default:
         break;
@@ -240,29 +265,29 @@ const CharacterDetail = (props) => {
     const value = ev.target.value;
     switch (value) {
       case 'Giratiempos':
-        props.ambition += 1;
-        props.hardWork += 1;
-        props.cunning += 1;
+        setAmbition(ambition + 1);
+        setHardWork(hardWork + 1);
+        setCunning(cunning + 1);
         break;
       case 'Poción Felix Felicis':
-        props.justice += 1;
-        props.loyality += 1;
-        props.friendship += 1;
-        props.ambition += 1;
+        setJustice(justice + 1);
+        setHardWork(hardWork + 1);
+        setFriendship(friendship + 1);
+        setAmbition(ambition + 1);
         break;
       case 'Recordadora':
-        props.justice += 1;
-        props.honour += 1;
+        setJustice(justice + 1);
+        setHonour(honour + 1);
         break;
       case 'Mapa del merodeador':
-        props.witness += 1;
-        props.cunning += 1;
-        props.ambition += 1;
+        setWitness(witness + 1);
+        setCunning(cunning + 1);
+        setAmbition(ambition + 1);
         break;
       case 'Capa de invisibilidad':
-        props.cunning += 1;
-        props.witness += 1;
-        props.ambition += 1;
+        setCunning(cunning + 1);
+        setWitness(witness + 1);
+        setAmbition(ambition + 1);
         break;
       default:
         break;
@@ -273,38 +298,38 @@ const CharacterDetail = (props) => {
     const value = ev.target.value;
     switch (value) {
       case 'Hermione':
-        props.ambition += 1;
-        props.friendship += 1;
-        props.honour += 1;
-        props.intelligence += 1;
-        props.justice += 1;
-        props.loyality += 1;
+        setAmbition(ambition + 1);
+        setFriendship(friendship + 1);
+        setHonour(honour + 1);
+        setIntelligence(intelligence + 1);
+        setJustice(justice + 1);
+        setHardWork(hardWork + 1);
         break;
       case 'Dumbledore':
-        props.honour += 1;
-        props.loyality += 1;
-        props.competition += 1;
-        props.ambition += 1;
-        props.cunning += 1;
+        setHonour(honour + 1);
+        setHardWork(hardWork + 1);
+        setCompetition(competition + 1);
+        setAmbition(ambition + 1);
+        setCunning(cunning + 1);
         break;
       case 'Sirius':
-        props.justice += 1;
-        props.honour += 1;
-        props.friendship += 1;
-        props.loyality += 1;
+        setJustice(justice + 1);
+        setHonour(honour + 1);
+        setFriendship(friendship + 1);
+        setHardWork(hardWork + 1);
         break;
       case 'Snape':
-        props.cunning += 1;
-        props.ambition += 1;
-        props.competition += 1;
-        props.witness += 1;
+        setCunning(cunning + 1);
+        setAmbition(ambition + 1);
+        setCompetition(competition + 1);
+        setWitness(witness + 1);
         break;
       case 'McGonagall':
-        props.intelligence += 1;
-        props.competition += 1;
-        props.hardWork += 1;
-        props.bravery += 1;
-        props.ambition += 1;
+        setIntelligence(intelligence + 1);
+        setCompetition(competition + 1);
+        setHardWork(hardWork + 1);
+        setBravery(bravery + 1);
+        setAmbition(ambition + 1);
         break;
       default:
         break;
@@ -315,24 +340,24 @@ const CharacterDetail = (props) => {
     const value = ev.target.value;
     switch (value) {
       case 'Ambición, astucia y determinación':
-        props.ambition += 1;
-        props.cunning += 1;
-        props.hardWork += 1;
+        setAmbition(ambition + 1);
+        setCunning(cunning + 1);
+        setHardWork(hardWork + 1);
         break;
       case 'Osadía, valentía y lealtad':
-        props.bravery += 1;
-        props.loyality += 1;
-        props.friendship += 1;
+        setBravery(bravery + 1);
+        setHardWork(hardWork + 1);
+        setFriendship(friendship + 1);
         break;
       case 'Originalidad, ingenio e inteligencia':
-        props.witness += 1;
-        props.intelligence += 1;
-        props.competition += 1;
+        setWitness(witness + 1);
+        setIntelligence(intelligence + 1);
+        setCompetition(competition + 1);
         break;
       case 'Honestidad, trabajo duro y paciencia':
-        props.honour += 1;
-        props.hardWork += 1;
-        props.justice += 1;
+        setHonour(honour + 1);
+        setHardWork(hardWork + 1);
+        setJustice(justice + 1);
         break;
       default:
         break;
@@ -343,63 +368,71 @@ const CharacterDetail = (props) => {
     const value = ev.target.value;
     switch (value) {
       case 'Escoba':
-        props.hardWork += 1;
-        props.honour += 1;
-        props.bravery += 1;
+        setHardWork(hardWork + 1);
+        setHonour(honour + 1);
+        setBravery(bravery + 1);
         break;
       case 'Coche volador':
-        props.ambition += 1;
-        props.witness += 1;
-        props.friendship += 1;
-        props.competition += 1;
+        setAmbition(ambition + 1);
+        setWitness(witness + 1);
+        setFriendship(friendship + 1);
+        setCompetition(competition + 1);
         break;
       case 'Thestral':
-        props.intelligence += 1;
-        props.bravery += 1;
-        props.loyality += 1;
-        props.witness += 1;
+        setIntelligence(intelligence + 1);
+        setBravery(bravery + 1);
+        setHardWork(hardWork + 1);
+        setWitness(witness + 1);
         break;
       case 'Polvos Flu':
-        props.witness += 1;
-        props.competition += 1;
-        props.intelligence += 1;
+        setWitness(witness + 1);
+        setCompetition(competition + 1);
+        setIntelligence(intelligence + 1);
         break;
       case 'Hipogrifo':
-        props.friendship += 1;
-        props.bravery += 1;
-        props.loyality += 1;
-        props.justice += 1;
-        props.competition += 1;
+        setFriendship(friendship + 1);
+        setBravery(bravery + 1);
+        setLoyality(loyality + 1);
+        setJustice(justice + 1);
+        setCompetition(competition + 1);
         break;
       default:
         break;
     }
   };
   const handleButton = () => {
-    console.log('hola mundo', props.cunning);
-    console.log(props.bravery, props.friendship, props.honour);
-    let gryffindorPoints = props.bravery + props.friendship + props.honour;
-    let slytherinPoints = props.cunning + props.ambition;
-    let ravenclawPoints =
-      props.intelligence + props.competition + props.witness;
-    let hufflepuffPoints = props.justice + props.loyality + props.hardWork;
-    console.log(gryffindorPoints);
-    let housesPoints = {
+    let gryffindorPoints = bravery + friendship + honour;
+    let slytherinPoints = cunning + ambition;
+    let ravenclawPoints = intelligence + competition + witness;
+    let hufflepuffPoints = justice + loyality + hardWork;
+    let housesPoints = [
       gryffindorPoints,
       slytherinPoints,
       ravenclawPoints,
       hufflepuffPoints,
-    };
+    ];
     console.log(housesPoints);
     let houseIndex = 4;
     let winnerHousePoints = 0;
-    // housesPoints.forEach((item) => {
-    //   console.log(item);
-    //   // if (item > winnerHousePoints) {
-    //   //   winnerHousePoints ===
-    //   // }
+    // const winner = housesPoints.map((data) => {
+    //   if (data === 9 || data > 9) {
+    //     console.log('es mayor que 8');
+    //   }
     // });
+    // console.log(winner);
+    for (let index = 0; index < housesPoints.length; index++) {
+      const element = housesPoints[index];
+      console.log(element);
+      if (element >= 9) {
+        console.log('estoy dentro el for y soy igual o mayor que 9');
+      }
+      if (element <= 8) {
+        console.log('estoy dentro del for y soy menor o igual que 8');
+      } else {
+      }
+    }
   };
+
   const handlePrevent = (ev) => {
     ev.preventDefault();
   };
