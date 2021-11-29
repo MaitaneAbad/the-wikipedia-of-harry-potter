@@ -1,9 +1,17 @@
+import logo from '../images/logo.png';
+import '../styles/layout/header.scss';
 const Header = () => {
   return (
-    <header>
-      <h1>
-        Harry Potter y animales fantásticos<span> wiki</span>
-      </h1>
+    <header className='header'>
+      <div className='header__container'>
+        {' '}
+        <img
+          className='header__container--img'
+          src={logo}
+          alt='Logo'
+          title='La wiki de Harry Potter'
+        />
+      </div>
     </header>
   );
 };

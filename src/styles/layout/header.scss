@@ -1,0 +1,18 @@
+.header {
+  background-color: azure;
+
+  padding: 20px 0;
+  &__container {
+    display: flex;
+    justify-content: center;
+    &--img {
+      width: 150px;
+      @media (min-width: 768px) {
+        width: 300px;
+      }
+      @media (min-width: 1024px) {
+        width: 365px;
+      }
+    }
+  }
+}
