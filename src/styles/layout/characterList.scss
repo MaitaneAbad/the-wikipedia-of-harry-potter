@@ -1,23 +1,60 @@
 @import '../core/variables';
 
-.list {
-  display: flex;
-  flex-wrap: wrap;
-  // column-gap: 40px;
-  justify-content: center;
-  .characterLi {
-    border: whitesmoke solid 5px;
+.sectionList {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    // column-gap: 40px;
+    justify-content: center;
+    &--characterLi {
+      border: whitesmoke solid 5px;
+      &__name {
+        color: whitesmoke;
+      }
+      &__nickName {
+        color: whitesmoke;
+        &--nick {
+        }
+      }
+      &__img {
+        width: 150px;
+      }
+      &__status {
+      }
+      &__statusMarital {
+      }
+      &__sectionBlood {
+      }
+      &__blood {
+      }
+      &__sectionChildren {
+      }
+      &__childrens {
+        &--childList {
+          &__name {
+          }
+        }
+      }
+      &__sectionDescription {
+      }
+      &__breed {
+      }
+      &__genre {
+      }
+      &__hairColour {
+      }
+      &__eyesColour {
+      }
+      &__sectionHouse {
+      }
+      &__house {
+      }
+      &__sectionPatronus {
+      }
+      &__patronus {
+      }
+    }
   }
-  .imgApi {
-    width: 195px;
-
-    //   transition: width 0.1s, box-shadow 0.25s;
-    //   &:hover {
-    //     width: 200px;
-    //   }
-    // }
-    // .childrenData {
-    //   width: 21ch;
-    //   margin: auto;
+  &__notSearch {
   }
 }
