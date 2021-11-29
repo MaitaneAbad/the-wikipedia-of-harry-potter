@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.ed221229.chunk.css",
-    "main.js": "./static/js/main.b6720e96.chunk.js",
-    "main.js.map": "./static/js/main.b6720e96.chunk.js.map",
+    "main.css": "./static/css/main.cdea89ca.chunk.css",
+    "main.js": "./static/js/main.b8830621.chunk.js",
+    "main.js.map": "./static/js/main.b8830621.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.7ad783a2.js",
     "runtime-main.js.map": "./static/js/runtime-main.7ad783a2.js.map",
     "static/js/2.8e4efffd.chunk.js": "./static/js/2.8e4efffd.chunk.js",
     "static/js/2.8e4efffd.chunk.js.map": "./static/js/2.8e4efffd.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.ed221229.chunk.css.map": "./static/css/main.ed221229.chunk.css.map",
+    "static/css/main.cdea89ca.chunk.css.map": "./static/css/main.cdea89ca.chunk.css.map",
     "static/js/2.8e4efffd.chunk.js.LICENSE.txt": "./static/js/2.8e4efffd.chunk.js.LICENSE.txt",
     "static/media/accio.f04180b6.gif": "./static/media/accio.f04180b6.gif",
     "static/media/admitido.db980ec2.gif": "./static/media/admitido.db980ec2.gif",
@@ -36,6 +36,7 @@
     "static/media/imperio.43148f84.gif": "./static/media/imperio.43148f84.gif",
     "static/media/invisibility.16efe9b6.gif": "./static/media/invisibility.16efe9b6.gif",
     "static/media/leviosa.27bdd091.gif": "./static/media/leviosa.27bdd091.gif",
+    "static/media/logo.0aa9325e.png": "./static/media/logo.0aa9325e.png",
     "static/media/lupin.b90525bf.jpg": "./static/media/lupin.b90525bf.jpg",
     "static/media/magicalCreatures.50f68266.gif": "./static/media/magicalCreatures.50f68266.gif",
     "static/media/map.f044524e.gif": "./static/media/map.f044524e.gif",
@@ -65,7 +66,7 @@
   "entrypoints": [
     "static/js/runtime-main.7ad783a2.js",
     "static/js/2.8e4efffd.chunk.js",
-    "static/css/main.ed221229.chunk.css",
-    "static/js/main.b6720e96.chunk.js"
+    "static/css/main.cdea89ca.chunk.css",
+    "static/js/main.b8830621.chunk.js"
   ]
 }
