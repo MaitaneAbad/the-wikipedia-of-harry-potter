@@ -1,11 +1,9 @@
-import '../styles/layout/searchName.scss';
-
 const FilterByname = (props) => {
   return (
-    <div className='formSearch'>
-      <label className='formSearch__label'>Busca el personaje: </label>
+    <div className='form__formSearch'>
+      <label className='form__formSearch--label'>Busca el personaje: </label>
       <input
-        className='formSearch__input'
+        className='form__formSearch--input'
         type='text'
         placeholder='Ej. Minerva McGonagall...'
         name='name'

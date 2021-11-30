@@ -1,4 +1,5 @@
 import '../styles/layout/formHat.scss';
+import bus from '../images/nightBus.gif';
 import FirstQuestion from './quiz/FirstQuestion';
 import SecondQuestion from './quiz/SecondQuestion';
 import ThirdQuestion from './quiz/ThirdQuestion';
@@ -414,18 +415,20 @@ const CharacterDetail = (props) => {
     console.log(housesPoints);
     let winnerHousePoints = 0;
     // const winner = housesPoints.map((data) => {
-    //   if (data === 9 || data > 9) {
+    //   if (data.length === 9 || data.lenght > 9) {
     //     console.log('es mayor que 8');
     //   }
     // });
     // console.log(winner);
     for (let i = 0; i < housesPoints.length; i++) {
-      if (housesPoints[i] > winnerHousePoints) {
-        winnerHousePoints = housesPoints[i];
-        console.log('estoy dentro el for y me da el numero más alto');
-      }
+      console.log(housesPoints[i]);
+      console.log(winnerHousePoints);
+      // if (housesPoints[i] > winnerHousePoints) {
+      //   winnerHousePoints = housesPoints[i];
+      //   console.log('estoy dentro el for y me da el numero más alto');
+      // }
+      console.log(winnerHousePoints);
     }
-    console.log(winnerHousePoints);
   };
 
   const handlePrevent = (ev) => {
@@ -433,8 +436,17 @@ const CharacterDetail = (props) => {
   };
   return (
     <main>
-      <Link to='/' className='characterDetail'>
-        <p>Volver atrás</p>
+      <Link to='/'>
+        {/* <p>Volver atrás</p> */}
+        <div className='imgBack'>
+          <img
+            className='imgBack__img'
+            src={bus}
+            alt='Autobus noctámbulo para volver atrás'
+            title='Autobus noctámbulo para volver atrás'
+          />
+          <i className='imgBack__icon fas fa-undo-alt'></i>
+        </div>
       </Link>
       <form onSubmit={handlePrevent} className='formHat'>
         <FirstQuestion handlePet={handlePet} pet={pet} />

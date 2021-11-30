@@ -1,3 +1,19 @@
+.imgBack {
+  display: flex;
+
+  &__img {
+    margin: 10px 0 0 10px;
+    width: 85px;
+    border-radius: 15px;
+  }
+  &__icon {
+    color: rgba(245, 245, 245, 0.425);
+    position: relative;
+    top: 20px;
+    left: -80px;
+    font-size: 15px;
+  }
+}
 .formHat {
   color: whitesmoke;
   margin: 0 60px;
