@@ -10,7 +10,7 @@ const FormButton = (props) => {
         <p className='quiz__subtitle'> ¡Pues pincha en el sombrero!</p>
       </div>
       <form className='quiz__formButton'>
-        <Link to={'/quiz/'}>
+        <Link to='/quiz'>
           <input
             className='quiz__formButton--input'
             type='button'

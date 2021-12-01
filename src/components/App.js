@@ -8,10 +8,7 @@ import Header from './Header';
 import Footer from './Footer';
 import FormButton from './FormButton';
 import QuizHat from './QuizHat';
-
-// Fichero src/components/App.js
-
-// import { Link, Route } from 'react-router-dom';
+import CharacterDetail from './QuizHat';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -22,15 +19,15 @@ const App = () => {
       setData(response);
     });
   }, []);
-
+  const routeDataCharacter = useRouteMatch('/character/:id');
+  const characterId =
+    routeDataCharacter !== null ? routeDataCharacter.params.id : '';
+  const characterDetail = data.find(
+    (data) => data.id === parseInt(characterId)
+  );
   const routeData = useRouteMatch('/quiz/:id');
-  const buttonId = routeData !== null ? routeData.params.id : '';
+  const buttonId = routeData !== null ? routeData.id : '';
   const selectedButton = data.find((data) => data.id === parseInt(buttonId));
-  // const routeDataCharacter = useRouteMatch('/character/:id');
-  // const characterId = routeDataCharacter !== null ? routeData.params.id : '';
-  // const characterDetail = data.find(
-  //   (data) => data.id === parseInt(characterId)
-  // );
 
   const filteredCharacter = data
     .filter((character) =>
@@ -58,18 +55,18 @@ const App = () => {
   return (
     <div>
       <Header />
-      <Switch />
-      <Route exact path='/quiz/'>
-        <QuizHat quiz={selectedButton} />
-      </Route>
-      {/* <Route path='/character/:id'>
-        <CharacterDetail character={characterDetail} />
-      </Route> */}
-      <Route exact path='/'>
-        <Form searchName={searchName} handleSearchName={handleSearchName} />
-        <CharacterList data={filteredCharacter} searchName={searchName} />
-        <FormButton data={filteredCharacter} />
-        {/* <li>
+      <Switch>
+        <Route path='/quiz'>
+          <QuizHat quiz={selectedButton} />
+        </Route>
+        <Route path='/character/:id'>
+          <CharacterDetail character={characterDetail} />
+        </Route>
+        <Route exact path='/'>
+          <Form searchName={searchName} handleSearchName={handleSearchName} />
+          <CharacterList data={filteredCharacter} searchName={searchName} />
+          <FormButton data={filteredCharacter} />
+          {/* <li>
           Tarjeta que incluirá:
           <p>Nombre</p>
           <p>
@@ -85,9 +82,9 @@ const App = () => {
           <p>Casa de hogwarts o de magia</p>
           <p>Patronus</p>
         </li> */}
-        {/* <NotFoundPage />*/}
-      </Route>
-      <Switch />
+          {/* <NotFoundPage />*/}
+        </Route>
+      </Switch>
       <Footer />
     </div>
   );

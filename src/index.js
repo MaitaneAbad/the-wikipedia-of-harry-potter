@@ -8,8 +8,6 @@ import App from './components/App';
 ReactDOM.render(
   <HashRouter>
     <App />
-  </HashRouter>, //Le indicamos que el componente HashRouter es ahora la madre de App. Esto hace que tanto App como todos sus componentes hijas, nietas... puedan trabajar con las rutas.
-  document.getElementById('root') // estamos diciendo que vamos a usar las rutas con Hash.
+  </HashRouter>,
+  document.getElementById('root')
 );
-
-//Nota: en el futuro cuando tengas acceso a la configuración de tu servidor y puedas usar el sistema moderno de rutas, tienes que cambiar en este fichero la palabra HashRouter por BrowserRouter.
