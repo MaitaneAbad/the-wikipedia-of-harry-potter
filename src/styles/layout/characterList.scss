@@ -5,59 +5,88 @@
     margin: 0 100px;
   }
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-
+    margin: 0 20px;
+    display: grid;
     justify-content: center;
-    @media (min-width: 1024px) {
-      column-gap: 60px;
+    flex-wrap: wrap;
+    //grid-template-columns: ;
+    // column-gap: 20px;
+    row-gap: 20px;
+    font-size: 12px;
+    @media (min-width: 600px) {
+      //   column-gap: 60px;
+      grid-template-columns: 1fr 1fr;
+      font-size: 16px;
     }
     &--characterLi {
-      border: whitesmoke solid 5px;
-      &__name {
-        color: whitesmoke;
-      }
-      &__nickName {
-        color: whitesmoke;
-        &--nick {
-        }
-      }
-      &__img {
-        width: 150px;
-      }
-      &__status {
-      }
-      &__statusMarital {
-      }
-      &__sectionBlood {
-      }
-      &__blood {
-      }
-      &__sectionChildren {
-      }
-      &__childrens {
-        &--childList {
-          &__name {
+      &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url(../../images/parchment.png);
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+        width: 265px;
+
+        &--img {
+          margin: 0 10px 0 15px;
+          height: 50px;
+          @media (min-width: 450px) {
+            height: 100px;
+          }
+          @media (min-width: 700px) {
+            height: 150px;
           }
         }
-      }
-      &__sectionDescription {
-      }
-      &__breed {
-      }
-      &__genre {
-      }
-      &__hairColour {
-      }
-      &__eyesColour {
-      }
-      &__sectionHouse {
-      }
-      &__house {
-      }
-      &__sectionPatronus {
-      }
-      &__patronus {
+
+        &--containerData {
+          width: 15ch;
+
+          &__name {
+            color: whitesmoke;
+            word-wrap: break-word;
+          }
+          &__nickName {
+            color: whitesmoke;
+            &--nick {
+            }
+          }
+          &__status {
+          }
+          &__statusMarital {
+          }
+          &__sectionBlood {
+          }
+          &__blood {
+          }
+          &__sectionChildren {
+          }
+          &__childrens {
+            &--childList {
+              &__name {
+              }
+            }
+          }
+          &__sectionDescription {
+          }
+          &__breed {
+          }
+          &__genre {
+          }
+          &__hairColour {
+          }
+          &__eyesColour {
+          }
+          &__sectionHouse {
+          }
+          &__house {
+          }
+          &__sectionPatronus {
+          }
+          &__patronus {
+          }
+        }
       }
     }
   }

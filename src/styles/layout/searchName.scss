@@ -3,7 +3,7 @@
     margin: 30px 110px;
   }
   &__formSearch {
-    margin: 15px;
+    margin: 15px 15px 40px;
     padding: 5px;
     display: flex;
     flex-direction: column;
@@ -22,8 +22,10 @@
     &--input {
       width: 175px;
       margin-top: 5px;
-      padding: 2px 5px;
+      padding: 2px 6px;
       color: rgba(39, 38, 38, 0.877);
+      border: black 1px solid;
+      border-radius: 10px;
       @media (min-width: 768px) {
         width: 300px;
       }
