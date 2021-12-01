@@ -445,7 +445,7 @@ const CharacterDetail = (props) => {
             alt='Autobus noctámbulo para volver atrás'
             title='Autobus noctámbulo para volver atrás'
           />
-          <i className='imgBack__icon fas fa-undo-alt'></i>
+          {/* <i className='imgBack__icon fas fa-undo-alt'></i> */}
         </div>
       </Link>
       <form onSubmit={handlePrevent} className='formHat'>
