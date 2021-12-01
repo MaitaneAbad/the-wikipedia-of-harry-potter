@@ -7,7 +7,6 @@
   &__list {
     margin: 0 20px;
     display: grid;
-    justify-content: center;
     flex-wrap: wrap;
     //grid-template-columns: ;
     // column-gap: 20px;
@@ -19,6 +18,7 @@
       font-size: 16px;
     }
     &--characterLi {
+      margin: auto;
       &__link {
         display: flex;
         align-items: center;
@@ -28,24 +28,33 @@
         background-position: center;
         height: 200px;
         width: 265px;
-
+        @media (min-width: 450px) {
+          height: 250px;
+          width: 350px;
+        }
+        @media (min-width: 700px) {
+          height: 300px;
+          width: 400px;
+        }
         &--img {
           margin: 0 10px 0 15px;
           height: 50px;
+          border-radius: 20px;
           @media (min-width: 450px) {
             height: 100px;
+            margin: 0 0 0 20px;
           }
           @media (min-width: 700px) {
-            height: 150px;
+            height: 140px;
+            margin: 0 5px 0 25px;
           }
         }
 
         &--containerData {
-          width: 15ch;
-
+          width: 14ch;
+          word-wrap: break-word;
           &__name {
             color: whitesmoke;
-            word-wrap: break-word;
           }
           &__nickName {
             color: whitesmoke;
