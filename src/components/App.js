@@ -8,7 +8,7 @@ import Header from './Header';
 import Footer from './Footer';
 import FormButton from './FormButton';
 import QuizHat from './QuizHat';
-import CharacterDetail from './QuizHat';
+import CharacterDetail from './CharacterDetail.js';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -22,12 +22,10 @@ const App = () => {
   const routeDataCharacter = useRouteMatch('/character/:id');
   const characterId =
     routeDataCharacter !== null ? routeDataCharacter.params.id : '';
+  console.log(characterId);
   const characterDetail = data.find(
     (data) => data.id === parseInt(characterId)
   );
-  const routeData = useRouteMatch('/quiz/:id');
-  const buttonId = routeData !== null ? routeData.id : '';
-  const selectedButton = data.find((data) => data.id === parseInt(buttonId));
 
   const filteredCharacter = data
     .filter((character) =>
@@ -57,31 +55,17 @@ const App = () => {
       <Header />
       <Switch>
         <Route path='/quiz'>
-          <QuizHat quiz={selectedButton} />
+          <QuizHat />
         </Route>
-        <Route path='/character/:id'>
+        <Route path='/character/:id/'>
           <CharacterDetail character={characterDetail} />
         </Route>
         <Route exact path='/'>
-          <Form searchName={searchName} handleSearchName={handleSearchName} />
-          <CharacterList data={filteredCharacter} searchName={searchName} />
-          <FormButton data={filteredCharacter} />
-          {/* <li>
-          Tarjeta que incluirá:
-          <p>Nombre</p>
-          <p>
-            Descripción del personaje con su año de nacimiento y muerte ( y si
-            muere por causa natural o asesinado por algún mago)
-          </p>
-          <p>
-            Descripción física: especie, género, estatura, color de pelo, color
-            de ojos, color de piel
-          </p>
-          <p>Foto</p>
-          <p>Mascota si tenia</p>
-          <p>Casa de hogwarts o de magia</p>
-          <p>Patronus</p>
-        </li> */}
+          <main className='main'>
+            <Form searchName={searchName} handleSearchName={handleSearchName} />
+            <CharacterList data={filteredCharacter} searchName={searchName} />
+            <FormButton data={filteredCharacter} />
+          </main>
           {/* <NotFoundPage />*/}
         </Route>
       </Switch>

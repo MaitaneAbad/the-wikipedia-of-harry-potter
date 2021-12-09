@@ -5,7 +5,6 @@ const FormButton = (props) => {
   return (
     <>
       <div className='quiz'>
-        {' '}
         <p className='quiz__title'>¿Quieres conocer de qué casa eres?</p>
         <p className='quiz__subtitle'> ¡Pues pincha en el sombrero!</p>
       </div>

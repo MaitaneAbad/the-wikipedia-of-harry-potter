@@ -435,9 +435,8 @@ const CharacterDetail = (props) => {
     ev.preventDefault();
   };
   return (
-    <main>
+    <>
       <Link to='/'>
-        {/* <p>Volver atrás</p> */}
         <div className='imgBack'>
           <img
             className='imgBack__img'
@@ -467,7 +466,7 @@ const CharacterDetail = (props) => {
         <TenQuestion handleTransport={handleTransport} transport={transport} />
         <ButtonResponse handleButton={handleButton} />
       </form>
-    </main>
+    </>
   );
 };
 export default CharacterDetail;
