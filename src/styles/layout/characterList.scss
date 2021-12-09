@@ -32,6 +32,7 @@
         background-position: center;
         height: 200px;
         width: 265px;
+
         @media (min-width: 450px) {
           height: 250px;
           width: 350px;
@@ -101,6 +102,14 @@
           &__sectionPatronus {
           }
           &__patronus {
+          }
+        }
+        &--paragraph {
+          display: inline-block;
+          position: relative;
+          transform: translate(10px, -45px);
+          @media (min-width: 768px) {
+            transform: translate(10px, -80px);
           }
         }
       }
