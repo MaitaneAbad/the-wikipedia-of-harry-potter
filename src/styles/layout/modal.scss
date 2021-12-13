@@ -1,0 +1,23 @@
+.p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(190, 57, 57, 0.541);
+  max-width: 100vw;
+}
+
+.v {
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 5vw;
+  height: 5vh;
+  max-width: 100vw;
+}

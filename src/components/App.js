@@ -8,7 +8,7 @@ import Header from './Header';
 import Footer from './Footer';
 import FormButton from './FormButton';
 import QuizHat from './QuizHat';
-import CharacterDetail from './CharacterDetail.js';
+import CharacterDetail from './CharacterDetail';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -22,7 +22,6 @@ const App = () => {
   const routeDataCharacter = useRouteMatch('/character/:id');
   const characterId =
     routeDataCharacter !== null ? routeDataCharacter.params.id : '';
-  console.log(characterId);
   const characterDetail = data.find(
     (data) => data.id === parseInt(characterId)
   );
@@ -64,7 +63,7 @@ const App = () => {
           <main className='main'>
             <Form searchName={searchName} handleSearchName={handleSearchName} />
             <CharacterList data={filteredCharacter} searchName={searchName} />
-            <FormButton data={filteredCharacter} />
+            <FormButton data={filteredCharacter} id='quiz' />
           </main>
           {/* <NotFoundPage />*/}
         </Route>

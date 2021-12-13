@@ -101,9 +101,9 @@ const SixQuestion = (props) => {
           <p>Grageas Bertie Bott </p>
         </label>
       </div>
-      <p className='formHat__sixQuestion--response'>
+      {/* <p className='formHat__sixQuestion--response'>
         Tu respuesta seleccionada es: {props.sweet}
-      </p>
+      </p> */}
     </fieldset>
   );
 };

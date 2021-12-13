@@ -73,9 +73,9 @@ const ThirdQuestion = (props) => {
           Filtro de amor
         </label>
       </div>
-      <p className='formHat__thirdQuestion--response'>
+      {/* <p className='formHat__thirdQuestion--response'>
         Tu respuesta seleccionada es: {props.invention}
-      </p>
+      </p> */}
     </fieldset>
   );
 };

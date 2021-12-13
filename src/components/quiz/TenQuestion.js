@@ -122,9 +122,9 @@ const TenQuestion = (props) => {
           <p>Hipogrifo </p>
         </label>
       </div>
-      <p className='formHat__tenQuestion--response'>
+      {/* <p className='formHat__tenQuestion--response'>
         Tu respuesta seleccionada es: {props.transport}
-      </p>
+      </p> */}
     </fieldset>
   );
 };

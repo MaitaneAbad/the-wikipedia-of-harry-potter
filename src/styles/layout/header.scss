@@ -16,3 +16,26 @@
     }
   }
 }
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 25px;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+  &__home {
+    margin: 10px auto 5px;
+  }
+  &__howarts {
+    margin: 5px auto;
+  }
+  &__contact {
+    margin: 5px auto 10px;
+    &--link {
+      padding: 5px;
+      box-sizing: border-box;
+    }
+  }
+}

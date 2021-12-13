@@ -21,6 +21,12 @@ const CharacterDetail = (props) => {
         <Link to='/' className='characterDetail'>
           <p>Volver atrás</p>
         </Link>
+        <img
+          className='sectionList__list--characterLi__link--containerData__img'
+          src={props.character.img}
+          alt={`Foto de: ${props.character.name}`}
+          title={`Foto de: ${props.character.name}`}
+        />
         <h3 className='sectionList__list--characterLi__link--containerData__status'>
           Marital Status
         </h3>

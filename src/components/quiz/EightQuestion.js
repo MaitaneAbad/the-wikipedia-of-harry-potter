@@ -122,9 +122,9 @@ const EightQuestion = (props) => {
           <p>McGonagall </p>
         </label>
       </div>
-      <p className='formHat__eightQuestion--response'>
+      {/* <p className='formHat__eightQuestion--response'>
         Tu respuesta seleccionada es: {props.protect}
-      </p>
+      </p> */}
     </fieldset>
   );
 };

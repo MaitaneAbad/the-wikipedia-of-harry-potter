@@ -1,5 +1,6 @@
 import '../styles/layout/formHat.scss';
 import bus from '../images/nightBus.gif';
+import gryffindor from '../images/gryffindor.png';
 import FirstQuestion from './quiz/FirstQuestion';
 import SecondQuestion from './quiz/SecondQuestion';
 import ThirdQuestion from './quiz/ThirdQuestion';
@@ -11,8 +12,7 @@ import EightQuestion from './quiz/EightQuestion';
 import NineQuestion from './quiz/NineQuestion';
 import TenQuestion from './quiz/TenQuestion';
 import ButtonResponse from './quiz/ButtonResponse';
-
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import { useState } from 'react';
 
 const CharacterDetail = (props) => {
@@ -76,17 +76,6 @@ const CharacterDetail = (props) => {
         break;
     }
   };
-  // console.log(intelligence);
-  // console.log(cunning);
-  // console.log(ambition);
-  // console.log(hardWork);
-  // console.log(honour);
-  // console.log(justice);
-  // console.log(witness);
-  // console.log(bravery);
-  // console.log(competition);
-  // console.log(friendship);
-  // console.log(loyality);
 
   const handleclassroom = (ev) => {
     setClassroom(ev.target.value);
@@ -401,6 +390,7 @@ const CharacterDetail = (props) => {
         break;
     }
   };
+
   const handleButton = () => {
     let gryffindorPoints = bravery + friendship + honour;
     let slytherinPoints = cunning + ambition;
@@ -414,23 +404,78 @@ const CharacterDetail = (props) => {
     ];
     console.log(housesPoints);
     let winnerHousePoints = 0;
-    // const winner = housesPoints.map((data) => {
-    //   if (data.length === 9 || data.lenght > 9) {
-    //     console.log('es mayor que 8');
-    //   }
-    // });
-    // console.log(winner);
+    let winnerHouseIndex = 0;
     for (let i = 0; i < housesPoints.length; i++) {
-      console.log(housesPoints[i]);
-      console.log(winnerHousePoints);
-      // if (housesPoints[i] > winnerHousePoints) {
-      //   winnerHousePoints = housesPoints[i];
-      //   console.log('estoy dentro el for y me da el numero más alto');
-      // }
-      console.log(winnerHousePoints);
+      if (housesPoints[i] > winnerHousePoints) {
+        winnerHousePoints = housesPoints[i];
+        winnerHouseIndex++;
+      }
     }
+
+    console.log(winnerHouseIndex);
+    switch (winnerHouseIndex) {
+      case 1:
+        console.log('gryffindor');
+        gryffindorHouse();
+        break;
+      case 2:
+        console.log('slytherin');
+
+        break;
+      case 3:
+        console.log('ravenclaw');
+        break;
+      case 4:
+        console.log('hufflepuf');
+        break;
+      default:
+        break;
+    }
+
+    console.log(winnerHousePoints);
   };
 
+  const gryffindorHouse = () => {
+    console.log('html gryffindor');
+    return (
+      <>
+        <Link to='/quiz/house'>
+          <div className='modal'>
+            <div className='modal__window'>
+              <div className='modal__window--content'>
+                <header className='modal__window--content__header'>
+                  <h2 className='modal__window--content__header--title'>
+                    Gryffindor
+                  </h2>
+                  <Link to='/quiz'>
+                    <span className='modal__window--content__header--close'>
+                      <i class='fas fa-times-circle'></i>
+                    </span>
+                  </Link>
+                </header>
+                <div className='modal__window--content__detail'>
+                  <img
+                    className='modal__window--content__detail--img'
+                    src={gryffindor}
+                    alt='Autobus noctámbulo para volver atrás'
+                    title='Autobus noctámbulo para volver atrás'
+                  />
+                  <p className='modal__window--content__detail--paragraph'>
+                    Tienes coraje y valentía. Un buen miembro de Gryffindor
+                    tiene gran osadía, temple y caballerosidad. Son capaces de
+                    todo por defender en lo que creen y nunca se dan por
+                    vencidos. También son capaces de romper las reglas si es
+                    necesario y les encantan los retos, cuanto más difíciles,
+                    mejor.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Link>
+      </>
+    );
+  };
   const handlePrevent = (ev) => {
     ev.preventDefault();
   };
@@ -444,7 +489,6 @@ const CharacterDetail = (props) => {
             alt='Autobus noctámbulo para volver atrás'
             title='Autobus noctámbulo para volver atrás'
           />
-          {/* <i className='imgBack__icon fas fa-undo-alt'></i> */}
         </div>
       </Link>
       <form onSubmit={handlePrevent} className='formHat'>
@@ -463,8 +507,52 @@ const CharacterDetail = (props) => {
         <SevenQuestion handleObject={handleObject} object={object} />
         <EightQuestion handleProtect={handleProtect} protect={protect} />
         <NineQuestion handleQualities={handleQualities} qualitie={qualitie} />
-        <TenQuestion handleTransport={handleTransport} transport={transport} />
-        <ButtonResponse handleButton={handleButton} />
+        <TenQuestion
+          handleTransport={handleTransport}
+          transport={transport}
+        />{' '}
+        <Link to='/quiz/house'>
+          <ButtonResponse handleButton={handleButton} />
+        </Link>
+        <Route path='/quiz/house'>
+          <section>
+            {/* <Link to='/quiz/house'>
+              <div className='modal'>
+                <div className='modal__window'>
+                  <div className='modal__window--content'>
+                    <header className='modal__window--content__header'>
+                      <h2 className='modal__window--content__header--title'>
+                        Gryffindor
+                      </h2>
+                      <Link to='/quiz'>
+                        <span className='modal__window--content__header--close'>
+                          <i class='fas fa-times-circle'></i>
+                        </span>
+                      </Link>
+                    </header>
+                    <div className='modal__window--content__detail'>
+                      <img
+                        className='modal__window--content__detail--img'
+                        src={gryffindor}
+                        alt='Autobus noctámbulo para volver atrás'
+                        title='Autobus noctámbulo para volver atrás'
+                      />
+                      <p className='modal__window--content__detail--paragraph'>
+                        Tienes coraje y valentía. Un buen miembro de Gryffindor
+                        tiene gran osadía, temple y caballerosidad. Son capaces
+                        de todo por defender en lo que creen y nunca se dan por
+                        vencidos. También son capaces de romper las reglas si es
+                        necesario y les encantan los retos, cuanto más
+                        difíciles, mejor.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link> */}
+            {/* {houses()} */}
+          </section>
+        </Route>
       </form>
     </>
   );

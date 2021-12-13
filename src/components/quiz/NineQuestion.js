@@ -72,9 +72,9 @@ const NineQuestion = (props) => {
           Honestidad, trabajo duro y paciencia
         </label>
       </div>
-      <p className='formHat__nineQuestion--response'>
+      {/* <p className='formHat__nineQuestion--response'>
         Tu respuesta seleccionada es: {props.qualitie}
-      </p>
+      </p> */}
     </fieldset>
   );
 };

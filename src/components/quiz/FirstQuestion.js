@@ -97,10 +97,10 @@ const FirstQuestion = (props) => {
           ></img>
         </label>
       </div>
-      <p className='formHat__firstQuestion--response'>
+      {/* <p className='formHat__firstQuestion--response'>
         {' '}
         Tu respues seleccionada es: {props.pet}
-      </p>
+      </p> */}
     </fieldset>
   );
 };

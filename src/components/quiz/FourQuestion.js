@@ -144,9 +144,9 @@ const FourQuestion = (props) => {
           <p>Imperio</p>
         </label>
       </div>
-      <p className='formHat__fourQuestion--response'>
+      {/* <p className='formHat__fourQuestion--response'>
         Tu respuesta seleccionada es: {props.spell}
-      </p>
+      </p> */}
     </fieldset>
   );
 };

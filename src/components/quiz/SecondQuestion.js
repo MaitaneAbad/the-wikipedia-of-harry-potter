@@ -124,9 +124,9 @@ const SecondQuestion = (props) => {
           <p>Adivinación</p>
         </label>
       </div>
-      <p className='formHat__secondQuestion--response'>
+      {/* <p className='formHat__secondQuestion--response'>
         Tu respuesta seleccionada es: {props.classroom}
-      </p>
+      </p> */}
     </fieldset>
   );
 };

@@ -163,9 +163,9 @@ const FiveQuestion = (props) => {
           <p>Rubeus hagrid</p>
         </label>
       </div>
-      <p className='formHat__fiveQuestion--response'>
+      {/* <p className='formHat__fiveQuestion--response'>
         Tu respuesta seleccionada es: {props.teacher}
-      </p>
+      </p> */}
     </fieldset>
   );
 };

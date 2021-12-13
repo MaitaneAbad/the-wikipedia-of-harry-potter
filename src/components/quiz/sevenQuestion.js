@@ -122,9 +122,9 @@ const SevenQuestion = (props) => {
           <p>Capa de invisibilidad </p>
         </label>
       </div>
-      <p className='formHat__sevenQuestion--response'>
+      {/* <p className='formHat__sevenQuestion--response'>
         Tu respuesta seleccionada es: {props.object}
-      </p>
+      </p> */}
     </fieldset>
   );
 };
