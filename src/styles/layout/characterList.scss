@@ -101,9 +101,11 @@
         &--paragraph {
           display: inline-block;
           position: relative;
+          font-size: 20px;
           transform: translate(10px, -45px);
           @media (min-width: 768px) {
             transform: translate(10px, -80px);
+            font-size: 25px;
           }
         }
       }
