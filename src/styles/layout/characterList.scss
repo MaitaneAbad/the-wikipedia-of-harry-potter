@@ -15,7 +15,7 @@
     @media (min-width: 768px) {
       grid-template-columns: 1fr 1fr;
     }
-    @media (min-width: 1250px) {
+    @media (min-width: 1200px) {
       grid-template-columns: 1fr 1fr 1fr;
     }
     &--characterLi {
@@ -36,7 +36,7 @@
         }
         @media (min-width: 768px) {
           height: 350px;
-          width: 401px;
+          width: 360px;
         }
         &--img {
           margin: 0 10px 0 15px;

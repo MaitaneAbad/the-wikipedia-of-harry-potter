@@ -24,6 +24,8 @@
   font-size: 25px;
   @media (min-width: 768px) {
     flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
   }
   &__home {
     margin: 10px auto 5px;
@@ -33,6 +35,9 @@
   }
   &__contact {
     margin: 5px auto 10px;
+    @media (min-width: 768px) {
+      margin: 5px;
+    }
     &--link {
       padding: 5px;
       box-sizing: border-box;
