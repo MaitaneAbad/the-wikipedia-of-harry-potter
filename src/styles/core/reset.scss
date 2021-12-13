@@ -1,17 +1,13 @@
 .body {
-  color: rgb(0, 0, 0);
   text-align: center;
-  //min-width: 100vw;
+  max-width: 100vw;
   min-height: 100vh;
-  //background-image: linear-gradient(180deg, #830909, #380202);
-  //background-image: url(../../images/clouds.jpg);
   background-image: url(../../images/MinistryOfMAgic.jpg);
-  background-size: contain;
+  background-size: auto;
   box-sizing: border-box;
   font-family: 'Shalimar', cursive;
   font-weight: 700;
-  //background-repeat: no-repeat;
-  //background-position: center;
+
   background-position: 50% 50%;
   background-attachment: fixed;
   letter-spacing: 3px;
