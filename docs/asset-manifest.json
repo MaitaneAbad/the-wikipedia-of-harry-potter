@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.c78661b5.chunk.css",
+    "main.css": "./static/css/main.7ff623e1.chunk.css",
     "main.js": "./static/js/main.0ad19e8e.chunk.js",
     "main.js.map": "./static/js/main.0ad19e8e.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.7ad783a2.js",
@@ -8,7 +8,7 @@
     "static/js/2.790f70f5.chunk.js": "./static/js/2.790f70f5.chunk.js",
     "static/js/2.790f70f5.chunk.js.map": "./static/js/2.790f70f5.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.c78661b5.chunk.css.map": "./static/css/main.c78661b5.chunk.css.map",
+    "static/css/main.7ff623e1.chunk.css.map": "./static/css/main.7ff623e1.chunk.css.map",
     "static/js/2.790f70f5.chunk.js.LICENSE.txt": "./static/js/2.790f70f5.chunk.js.LICENSE.txt",
     "static/media/accio.f04180b6.gif": "./static/media/accio.f04180b6.gif",
     "static/media/admitido.db980ec2.gif": "./static/media/admitido.db980ec2.gif",
@@ -70,7 +70,7 @@
   "entrypoints": [
     "static/js/runtime-main.7ad783a2.js",
     "static/js/2.790f70f5.chunk.js",
-    "static/css/main.c78661b5.chunk.css",
+    "static/css/main.7ff623e1.chunk.css",
     "static/js/main.0ad19e8e.chunk.js"
   ]
 }
