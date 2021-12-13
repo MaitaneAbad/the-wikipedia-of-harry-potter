@@ -15,9 +15,9 @@
     @media (min-width: 768px) {
       grid-template-columns: 1fr 1fr;
     }
-    @media (min-width: 1200px) {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
+    // @media (min-width: 1200px) {
+    //   grid-template-columns: 1fr 1fr 1fr;
+    // }
     &--characterLi {
       margin: auto;
       &__link {
@@ -102,9 +102,9 @@
           display: inline-block;
           position: relative;
           font-size: 20px;
-          transform: translate(10px, -45px);
+          transform: translate(10px, -55px);
           @media (min-width: 768px) {
-            transform: translate(10px, -80px);
+            transform: translate(10px, -85px);
             font-size: 25px;
           }
         }

@@ -1,4 +1,11 @@
 const ButtonResponse = (props) => {
-  return <button onClick={props.handleButton}>Revelio</button>;
+  return (
+    <input
+      type='button'
+      value='Revelio'
+      className='button'
+      onClick={props.handleButton}
+    />
+  );
 };
 export default ButtonResponse;

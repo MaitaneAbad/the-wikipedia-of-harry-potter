@@ -10,6 +10,7 @@ import Footer from './Footer';
 import FormButton from './FormButton';
 import QuizHat from './QuizHat';
 import CharacterDetail from './CharacterDetail';
+import PageNotFound from './PageNotFound';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -56,9 +57,11 @@ const App = () => {
       <Switch>
         <Route path='/quiz'>
           <QuizHat />
+          <Footer />
         </Route>
         <Route path='/character/:id/'>
           <CharacterDetail character={characterDetail} />
+          <Footer />
         </Route>
         <Route exact path='/'>
           <main className='main'>
@@ -66,11 +69,10 @@ const App = () => {
             <Form searchName={searchName} handleSearchName={handleSearchName} />
             <CharacterList data={filteredCharacter} searchName={searchName} />
             <FormButton data={filteredCharacter} id='quiz' />
+            <Footer />
           </main>
-          {/* <NotFoundPage />*/}
         </Route>
       </Switch>
-      <Footer />
     </div>
   );
 };

@@ -21,7 +21,8 @@
   }
 }
 .formHat {
-  color: rgb(2, 2, 2);
+  color: #fff;
+  letter-spacing: 3px;
   margin: 0 60px;
   @media (min-width: 500px) {
     margin: 0 100px;
@@ -29,13 +30,16 @@
 
   &__firstQuestion {
     margin-top: 25px;
-    border-bottom: black 1px solid;
+    border-bottom: white 1px solid;
     &--fieldsetQuestion {
       display: flex;
       flex-direction: column;
       &__img {
-        width: 40%;
+        width: 80%;
         margin: auto;
+        @media (min-width: 768px) {
+          width: 60%;
+        }
       }
       &__question {
         display: inline-block;
@@ -44,7 +48,8 @@
         margin: 10px 0;
         color: #000;
         font-weight: 800;
-        background-color: rgba(245, 245, 245, 0.336);
+        background-color: rgba(245, 245, 245, 0.603);
+        padding: 5px;
         @media (min-width: 400px) {
           font-size: 0.8rem;
         }
@@ -74,18 +79,21 @@
     }
     &--response {
       padding-bottom: 20px;
-      border-bottom: black 1px solid;
+      border-bottom: white 1px solid;
     }
   }
   &__secondQuestion {
     margin-top: 50px;
-    border-bottom: black 1px solid;
+    border-bottom: white 1px solid;
     &--fieldsetQuestion {
       display: flex;
       flex-direction: column;
       &__img {
-        width: 40%;
+        width: 80%;
         margin: auto;
+        @media (min-width: 768px) {
+          width: 60%;
+        }
       }
       &__question {
         display: inline-block;
@@ -94,7 +102,8 @@
         margin: 10px 0;
         color: #000;
         font-weight: 800;
-        background-color: rgba(245, 245, 245, 0.336);
+        background-color: rgba(245, 245, 245, 0.603);
+        padding: 5px;
         @media (min-width: 400px) {
           font-size: 0.8rem;
         }
@@ -125,7 +134,7 @@
     }
     &--response {
       padding-bottom: 20px;
-      border-bottom: black 1px solid;
+      border-bottom: white 1px solid;
     }
   }
   &__thirdQuestion {
@@ -134,14 +143,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: black 1px solid;
+    border-bottom: white 1px solid;
 
     &--fieldsetQuestion {
       display: flex;
       flex-direction: column;
       &__img {
-        width: 40%;
+        width: 80%;
         margin: auto;
+        @media (min-width: 768px) {
+          width: 60%;
+        }
       }
       &__question {
         display: inline-block;
@@ -150,7 +162,8 @@
         margin: 10px 0 20px 0;
         color: #000;
         font-weight: 800;
-        background-color: rgba(245, 245, 245, 0.336);
+        background-color: rgba(245, 245, 245, 0.603);
+        padding: 5px;
       }
     }
     &--fieldsetInputs {
@@ -171,12 +184,12 @@
   }
   &__fourQuestion {
     margin-top: 50px;
-    border-bottom: black 1px solid;
+    border-bottom: white 1px solid;
     &--fieldsetQuestion {
       display: flex;
       flex-direction: column;
       &__img {
-        width: 40%;
+        width: 80%;
         margin: auto;
       }
       &__question {
@@ -186,7 +199,8 @@
         margin: 10px 0;
         color: #000;
         font-weight: 800;
-        background-color: rgba(245, 245, 245, 0.336);
+        background-color: rgba(245, 245, 245, 0.603);
+        padding: 5px;
         @media (min-width: 400px) {
           font-size: 0.8rem;
         }
@@ -202,6 +216,9 @@
         &--option {
           display: flex;
           margin: auto;
+          @media (min-width: 768px) {
+            width: 60%;
+          }
         }
         &--img {
           width: 100px;
@@ -216,18 +233,21 @@
     }
     &--response {
       padding-bottom: 20px;
-      border-bottom: black 1px solid;
+      border-bottom: white 1px solid;
     }
   }
   &__fiveQuestion {
     margin-top: 50px;
-    border-bottom: black 1px solid;
+    border-bottom: white 1px solid;
     &--fieldsetQuestion {
       display: flex;
       flex-direction: column;
       &__img {
-        width: 40%;
+        width: 80%;
         margin: auto;
+        @media (min-width: 768px) {
+          width: 60%;
+        }
       }
       &__question {
         display: inline-block;
@@ -236,7 +256,8 @@
         margin: 10px 0;
         color: #000;
         font-weight: 800;
-        background-color: rgba(245, 245, 245, 0.336);
+        background-color: rgba(245, 245, 245, 0.603);
+        padding: 5px;
         @media (min-width: 400px) {
           font-size: 0.8rem;
         }
@@ -267,18 +288,21 @@
     &--response {
       margin-top: 15px;
       padding-bottom: 20px;
-      border-bottom: black 1px solid;
+      border-bottom: white 1px solid;
     }
   }
   &__sixQuestion {
-    border-bottom: black 1px solid;
+    border-bottom: white 1px solid;
     margin-top: 50px;
     &--fieldsetQuestion {
       display: flex;
       flex-direction: column;
       &__img {
-        width: 40%;
+        width: 80%;
         margin: auto;
+        @media (min-width: 768px) {
+          width: 60%;
+        }
       }
       &__question {
         display: inline-block;
@@ -318,18 +342,21 @@
     }
     &--response {
       padding-bottom: 20px;
-      border-bottom: black 1px solid;
+      border-bottom: white 1px solid;
     }
   }
   &__sevenQuestion {
-    border-bottom: black 1px solid;
+    border-bottom: white 1px solid;
     margin-top: 50px;
     &--fieldsetQuestion {
       display: flex;
       flex-direction: column;
       &__img {
-        width: 54%;
+        width: 80%;
         margin: auto;
+        @media (min-width: 768px) {
+          width: 60%;
+        }
       }
       &__question {
         display: inline-block;
@@ -338,7 +365,8 @@
         margin: 10px 0;
         color: #000;
         font-weight: 800;
-        background-color: rgba(245, 245, 245, 0.336);
+        background-color: rgba(245, 245, 245, 0.603);
+        padding: 5px;
         @media (min-width: 400px) {
           font-size: 0.8rem;
         }
@@ -369,18 +397,21 @@
     &--response {
       margin-top: 15px;
       padding-bottom: 20px;
-      border-bottom: black 1px solid;
+      border-bottom: white 1px solid;
     }
   }
   &__eightQuestion {
     margin-top: 50px;
-    border-bottom: black 1px solid;
+    border-bottom: white 1px solid;
     &--fieldsetQuestion {
       display: flex;
       flex-direction: column;
       &__img {
-        width: 40%;
+        width: 80%;
         margin: auto;
+        @media (min-width: 768px) {
+          width: 60%;
+        }
       }
       &__question {
         display: inline-block;
@@ -389,7 +420,8 @@
         margin: 10px 0;
         color: #000;
         font-weight: 800;
-        background-color: rgba(245, 245, 245, 0.336);
+        background-color: rgba(245, 245, 245, 0.603);
+        padding: 5px;
         @media (min-width: 400px) {
           font-size: 0.8rem;
         }
@@ -420,7 +452,7 @@
     }
     &--response {
       padding-bottom: 20px;
-      border-bottom: black 1px solid;
+      border-bottom: white 1px solid;
     }
   }
   &__nineQuestion {
@@ -429,23 +461,27 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: black 1px solid;
+    border-bottom: white 1px solid;
 
     &--fieldsetQuestion {
       display: flex;
       flex-direction: column;
       &__img {
-        width: 40%;
+        width: 80%;
         margin: auto;
+        @media (min-width: 768px) {
+          width: 60%;
+        }
       }
       &__question {
         display: inline-block;
         width: 45%;
         font-size: 0.8rem;
         margin: 10px 0 20px 0;
-        color: #000;
+        color: #fff;
         font-weight: 800;
-        background-color: rgba(245, 245, 245, 0.336);
+        background-color: rgba(245, 245, 245, 0.603);
+        padding: 5px;
       }
     }
     &--fieldsetInputs {
@@ -466,13 +502,16 @@
   }
   &__tenQuestion {
     margin-top: 50px;
-    border-bottom: black 1px solid;
+    border-bottom: white 1px solid;
     &--fieldsetQuestion {
       display: flex;
       flex-direction: column;
       &__img {
-        width: 40%;
+        width: 80%;
         margin: auto;
+        @media (min-width: 768px) {
+          width: 60%;
+        }
       }
       &__question {
         display: inline-block;
@@ -481,7 +520,8 @@
         margin: 10px 0;
         color: #000;
         font-weight: 800;
-        background-color: rgba(245, 245, 245, 0.336);
+        background-color: rgba(245, 245, 245, 0.603);
+        padding: 5px;
         @media (min-width: 400px) {
           font-size: 0.8rem;
         }
@@ -512,9 +552,16 @@
     }
     &--response {
       padding-bottom: 20px;
-      border-bottom: black 1px solid;
+      border-bottom: white 1px solid;
     }
   }
+}
+.button {
+  margin: 20px auto 50px;
+  color: #000;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 30px;
 }
 .modal {
   display: flex;
