@@ -3,12 +3,12 @@
   max-width: 100vw;
   min-height: 100vh;
   background-image: url(../../images/MinistryOfMAgic.jpg);
-  background-size: auto;
+  //background-size: cover;
   box-sizing: border-box;
   font-family: 'Shalimar', cursive;
   font-weight: 700;
-
-  background-position: 50% 50%;
+  background-repeat: repeat-y;
+  background-position: 53.5% 50%;
   background-attachment: fixed;
   letter-spacing: 3px;
 }
