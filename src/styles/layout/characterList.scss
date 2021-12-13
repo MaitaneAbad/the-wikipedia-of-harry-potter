@@ -15,9 +15,10 @@
     @media (min-width: 768px) {
       grid-template-columns: 1fr 1fr;
     }
-    // @media (min-width: 1200px) {
-    //   grid-template-columns: 1fr 1fr 1fr;
-    // }
+    @media (min-width: 1200px) {
+      //grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 20px;
+    }
     &--characterLi {
       margin: auto;
       &__link {
