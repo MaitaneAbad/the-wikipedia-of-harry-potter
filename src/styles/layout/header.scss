@@ -1,7 +1,17 @@
 .header {
   background-color: azure;
 
-  padding: 20px 0;
+  &__menuButton {
+    position: fixed;
+    margin-top: 0.5rem;
+    right: 0.5rem;
+    height: 5.5vh;
+    cursor: name;
+    &--hamburguer {
+      &:hover {
+      }
+    }
+  }
   &__container {
     display: flex;
     justify-content: center;

@@ -5,12 +5,10 @@ import callToApi from '../services/callToApi';
 import Form from './Form';
 import CharacterList from './CharacterList';
 import Header from './Header';
-import Menu from './Menu';
 import Footer from './Footer';
 import FormButton from './FormButton';
 import QuizHat from './QuizHat';
 import CharacterDetail from './CharacterDetail';
-import PageNotFound from './PageNotFound';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -65,7 +63,6 @@ const App = () => {
         </Route>
         <Route exact path='/'>
           <main className='main'>
-            <Menu />
             <Form searchName={searchName} handleSearchName={handleSearchName} />
             <CharacterList data={filteredCharacter} searchName={searchName} />
             <FormButton data={filteredCharacter} id='quiz' />

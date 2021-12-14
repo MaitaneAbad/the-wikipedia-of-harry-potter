@@ -2,28 +2,51 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 25px;
+  font-size: 15px;
   color: white;
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
+  text-transform: uppercase;
+  background-image: url(../../images/always.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 90vh;
+  transition: right 0.3s linear;
+  text-shadow: 30px -10px 20px #0e0d0d, -30px 10px 30px #0a0a0a;
+  @media (min-width: 500px) {
+    font-size: 27px;
   }
   &__home {
-    margin: 10px auto 5px;
+    margin: 50px auto 10px;
+    width: 15ch;
+    @media (min-width: 500px) {
+      margin-top: 100px;
+    }
   }
   &__howarts {
-    margin: 5px auto;
-  }
-  &__contact {
-    margin: 5px auto 10px;
-    @media (min-width: 768px) {
-      margin: 5px;
+    margin: 10px auto;
+    width: 20ch;
+    line-height: 20px;
+    @media (min-width: 500px) {
+      width: 22ch;
+      line-height: 25px;
     }
-    &--link {
-      padding: 5px;
-      box-sizing: border-box;
+  }
+  &__link {
+    margin: 10px auto;
+    padding: 5px;
+    box-sizing: border-box;
+    width: 20ch;
+    line-height: 20px;
+    @media (min-width: 500px) {
+      line-height: 25px;
     }
   }
 }

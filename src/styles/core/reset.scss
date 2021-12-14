@@ -12,13 +12,11 @@
   background-repeat: repeat;
   background-attachment: fixed;
   background-size: contain;
-  @media (min-width: 425px) {
-    background-position: 52% 50%;
-    background-repeat: no-repeat;
-    background-size: inherit;
-  }
+
   @media (min-width: 768px) {
     background-position: 52.6% 50%;
+    background-repeat: no-repeat;
+    background-size: inherit;
   }
   @media (min-width: 1150px) {
     background-position: 53.6% 50%;

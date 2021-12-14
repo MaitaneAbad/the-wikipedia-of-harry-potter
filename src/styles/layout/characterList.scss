@@ -101,16 +101,16 @@
         }
         &--paragraph {
           display: inline-block;
-          position: relative;
+          //position: relative;
           font-size: 18px;
-          transform: translate(7px, -49px);
+          // transform: translate(7px, -49px);
           letter-spacing: 1px;
           @media (min-width: 450px) {
-            transform: translate(7px, -51px);
+            //transform: translate(7px, -51px);
             font-size: 20px;
           }
           @media (min-width: 768px) {
-            transform: translate(10px, -85px);
+            //transform: translate(10px, -85px);
             font-size: 25px;
           }
         }
