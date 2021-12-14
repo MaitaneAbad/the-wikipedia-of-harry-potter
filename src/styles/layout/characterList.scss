@@ -9,11 +9,12 @@
     display: grid;
     flex-wrap: wrap;
     row-gap: 20px;
-    font-size: 25px;
+    font-size: 20px;
     column-gap: 10px;
     justify-content: center;
     @media (min-width: 768px) {
       grid-template-columns: 1fr 1fr;
+      font-size: 25px;
     }
     @media (min-width: 1200px) {
       //grid-template-columns: 1fr 1fr 1fr;
@@ -45,7 +46,7 @@
           border-radius: 15px;
           @media (min-width: 450px) {
             height: 100px;
-            margin: 0 0 0 20px;
+            margin: 0 10px 0 20px;
           }
           @media (min-width: 768px) {
             height: 140px;
@@ -55,7 +56,6 @@
 
         &--containerData {
           width: 7ch;
-          word-wrap: break-word;
           &__name {
             color: whitesmoke;
           }
@@ -102,8 +102,13 @@
         &--paragraph {
           display: inline-block;
           position: relative;
-          font-size: 20px;
-          transform: translate(10px, -55px);
+          font-size: 18px;
+          transform: translate(7px, -49px);
+          letter-spacing: 1px;
+          @media (min-width: 450px) {
+            transform: translate(7px, -51px);
+            font-size: 20px;
+          }
           @media (min-width: 768px) {
             transform: translate(10px, -85px);
             font-size: 25px;

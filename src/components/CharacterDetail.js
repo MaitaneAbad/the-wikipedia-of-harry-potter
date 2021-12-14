@@ -27,6 +27,12 @@ const CharacterDetail = (props) => {
           alt={`Foto de: ${props.character.name}`}
           title={`Foto de: ${props.character.name}`}
         />
+        {/* <h3 className='sectionList__list--characterLi__link--containerData__nickName'>
+            Nickname
+          </h3> 
+          <p className='sectionList__list--characterLi__link--containerData__nickName--nick'>
+            {props.characterData.nickName}
+          </p>*/}
         <h3 className='sectionList__list--characterLi__link--containerData__status'>
           Marital Status
         </h3>

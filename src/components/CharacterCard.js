@@ -17,12 +17,7 @@ const CharacterCard = (props) => {
           <h2 className='sectionList__list--characterLi__link--containerData__name'>
             {props.characterData.name}
           </h2>
-          {/* <h3 className='sectionList__list--characterLi__link--containerData__nickName'>
-            Nickname
-          </h3> */}
-          <p className='sectionList__list--characterLi__link--containerData__nickName--nick'>
-            {props.characterData.nickName}
-          </p>
+        
         </div>
       </Link>
 

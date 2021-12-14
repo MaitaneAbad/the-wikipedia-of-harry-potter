@@ -1,16 +1,25 @@
 .body {
   text-align: center;
-  max-width: 100vw;
-  min-height: 100vh;
-  background-image: url(../../images/MinistryOfMAgic.jpg);
-  //background-size: cover;
   box-sizing: border-box;
   font-family: 'Shalimar', cursive;
   font-weight: 700;
-  background-repeat: repeat-y;
-  background-position: 53.5% 50%;
+  letter-spacing: 3.5px;
+}
+.page {
+  max-width: 100vw;
+  min-height: 100vh;
+  background-image: url(../../images/MinistryOfMAgic.jpg);
+  background-repeat: repeat;
   background-attachment: fixed;
-  letter-spacing: 3px;
+  background-size: contain;
+  @media (min-width: 425px) {
+    background-position: 52% 50%;
+    background-repeat: no-repeat;
+    background-size: inherit;
+  }
+  @media (min-width: 768px) {
+    background-position: 52.6% 50%;
+  }
 }
 
 * {
