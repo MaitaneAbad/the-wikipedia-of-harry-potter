@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import recorder from '../images/recorder.png';
 const CharacterCard = (props) => {
   return (
     <div>
@@ -17,13 +18,14 @@ const CharacterCard = (props) => {
           <h2 className='sectionList__list--characterLi__link--containerData__name'>
             {props.characterData.name}
           </h2>
-        
+          <img
+            className='sectionList__list--characterLi__link--paragraph'
+            src={recorder}
+            title='Para más informacion, pinche la recordadora'
+            alt='Para más informacion, imagen de una recordadora'
+          />
         </div>
       </Link>
-
-      <p className='sectionList__list--characterLi__link--paragraph'>
-        Pincha para más información
-      </p>
     </div>
   );
 };
