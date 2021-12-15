@@ -15,8 +15,9 @@
     justify-content: center;
     align-items: center;
     color: black;
-    &.hover {
-      box-shadow: 0px 0px 1px grey;
+    transition: all 200ms ease-out;
+    &:hover {
+      box-shadow: 5px 5px 5px #7a797981;
     }
   }
   &__menuButtonExit {
@@ -35,8 +36,9 @@
     align-items: center;
     color: black;
     font-size: 18px;
+    transition: all 200ms ease-out;
     &:hover {
-      box-shadow: 0px 0px 1px grey;
+      box-shadow: 5px 5px 5px #2727274f;
     }
     &--exit {
     }
