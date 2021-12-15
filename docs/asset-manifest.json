@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.3ed85f7e.chunk.css",
-    "main.js": "./static/js/main.f2fdc78d.chunk.js",
-    "main.js.map": "./static/js/main.f2fdc78d.chunk.js.map",
+    "main.css": "./static/css/main.9a57c420.chunk.css",
+    "main.js": "./static/js/main.5ec3e0ce.chunk.js",
+    "main.js.map": "./static/js/main.5ec3e0ce.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.7ad783a2.js",
     "runtime-main.js.map": "./static/js/runtime-main.7ad783a2.js.map",
     "static/js/2.0f0735ca.chunk.js": "./static/js/2.0f0735ca.chunk.js",
     "static/js/2.0f0735ca.chunk.js.map": "./static/js/2.0f0735ca.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.3ed85f7e.chunk.css.map": "./static/css/main.3ed85f7e.chunk.css.map",
+    "static/css/main.9a57c420.chunk.css.map": "./static/css/main.9a57c420.chunk.css.map",
     "static/js/2.0f0735ca.chunk.js.LICENSE.txt": "./static/js/2.0f0735ca.chunk.js.LICENSE.txt",
     "static/media/App.scss": "./static/media/MinistryOfMAgic.c1d7e8f3.jpg",
     "static/media/accio.f04180b6.gif": "./static/media/accio.f04180b6.gif",
@@ -57,6 +57,7 @@
     "static/media/potions.ba2fd0c5.gif": "./static/media/potions.ba2fd0c5.gif",
     "static/media/pumpkin.04d9a78f.jpg": "./static/media/pumpkin.04d9a78f.jpg",
     "static/media/rat.075dc118.jpg": "./static/media/rat.075dc118.jpg",
+    "static/media/recorder.a37dbdb7.png": "./static/media/recorder.a37dbdb7.png",
     "static/media/recorder.f5b39dbb.gif": "./static/media/recorder.f5b39dbb.gif",
     "static/media/severus.b66dcb96.gif": "./static/media/severus.b66dcb96.gif",
     "static/media/sirius.8633a016.gif": "./static/media/sirius.8633a016.gif",
@@ -73,7 +74,7 @@
   "entrypoints": [
     "static/js/runtime-main.7ad783a2.js",
     "static/js/2.0f0735ca.chunk.js",
-    "static/css/main.3ed85f7e.chunk.css",
-    "static/js/main.f2fdc78d.chunk.js"
+    "static/css/main.9a57c420.chunk.css",
+    "static/js/main.5ec3e0ce.chunk.js"
   ]
 }
