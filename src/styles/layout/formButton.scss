@@ -6,9 +6,9 @@
   text-shadow: 30px -5px 20px #fcfafa, -30px 5px 30px #ffffff;
   display: inline-block;
   border-radius: 20px;
-  font-size: 25px;
+  font-size: 20px;
   @media (min-width: 768px) {
-    font-size: 35px;
+    font-size: 30px;
   }
 
   &__title {
@@ -27,7 +27,7 @@
       display: none;
     }
     &--img {
-      width: 35%;
+      width: 40%;
       max-width: 300px;
     }
   }
