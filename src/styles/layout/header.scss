@@ -1,6 +1,5 @@
 .header {
   background-color: azure;
-
   &__menuButton {
     position: fixed;
     margin: 0.5rem 0 0 0.5rem;
@@ -18,6 +17,11 @@
     transition: all 200ms ease-out;
     &:hover {
       box-shadow: 5px 5px 5px #7a797981;
+    }
+    @media (min-width: 1024px) {
+      width: 40px;
+      height: 40px;
+      font-size: 23px;
     }
   }
   &__menuButtonExit {
@@ -40,7 +44,10 @@
     &:hover {
       box-shadow: 5px 5px 5px #2727274f;
     }
-    &--exit {
+    @media (min-width: 1024px) {
+      width: 40px;
+      height: 40px;
+      font-size: 22px;
     }
   }
   &__container {
