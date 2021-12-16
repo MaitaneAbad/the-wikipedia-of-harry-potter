@@ -2,13 +2,24 @@
   margin: 30px 0;
   text-transform: uppercase;
   color: white;
-  //background-color: rgb(88, 88, 88);
+  background-color: rgba(0, 0, 0, 0.63);
+  text-shadow: 30px -5px 20px #fcfafa, -30px 5px 30px #ffffff;
+  display: inline-block;
+  border-radius: 20px;
+  font-size: 25px;
+  @media (min-width: 768px) {
+    font-size: 35px;
+  }
+
   &__title {
     margin: 10px;
   }
   &__subtitle {
     margin: 5px;
-    font-size: 14px;
+    font-size: 15px;
+    @media (min-width: 768px) {
+      font-size: 25px;
+    }
   }
   &__formButton {
     margin: 30px 0;
