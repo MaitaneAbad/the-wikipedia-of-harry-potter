@@ -16,7 +16,7 @@ const EightQuestion = (props) => {
         />
         <label htmlFor='protect'>
           <p className='formHat__eightQuestion--fieldsetQuestion__question'>
-            ¿Qué objeto mágico desearías tener?
+            ¿Qué personaje mágico desearías ser?
           </p>
         </label>
       </div>
