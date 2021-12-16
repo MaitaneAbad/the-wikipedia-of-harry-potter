@@ -2,11 +2,14 @@
   &__img {
     margin: 10px 10px;
     width: 50px;
-    border-radius: 15px;
-    margin-left: auto;
-    display: block;
+    padding: 5px;
+    position: absolute;
+    right: 0;
+    @media (min-width: 500px) {
+      width: 90px;
+    }
     @media (min-width: 768px) {
-      width: 100px;
+      width: 150px;
     }
     @media (min-width: 1024px) {
       width: 150px;
@@ -23,9 +26,9 @@
 .formHat {
   color: #fff;
   letter-spacing: 3px;
-  margin: 0 60px;
+  margin: 70px 60px 0;
   @media (min-width: 500px) {
-    margin: 0 100px;
+    margin: 125px 100px 0;
   }
 
   &__firstQuestion {

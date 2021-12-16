@@ -1,13 +1,19 @@
 import { Link } from 'react-router-dom';
 import PageNotFound from './PageNotFound';
 import '../styles/layout/characterDetail.scss';
+import bus from '../images/nightBus.gif';
 
 const CharacterDetail = (props) => {
   if (props.character !== undefined) {
     return (
       <section className='characterDetail'>
-        <Link to='/' className='characterDetail--link'>
-          <p>Volver atrás</p>
+        <Link to='/'>
+          <img
+            className='characterDetail--link'
+            src={bus}
+            alt='Autobus noctámbulo para volver atrás'
+            title='Autobus noctámbulo para volver atrás'
+          />
         </Link>
         <div className='characterDetail--section'>
           <img
@@ -24,7 +30,7 @@ const CharacterDetail = (props) => {
             </div>
             <div className='characterDetail--section__detail--sectionNickname'>
               <article className='characterDetail--section__detail--sectionNickname__container'>
-                Conocido también
+                Alias
                 <p className='characterDetail--section__detail--sectionNickname__container--title'>
                   {props.character.nickName}
                 </p>
@@ -48,26 +54,40 @@ const CharacterDetail = (props) => {
             </div>
             <div className='characterDetail--section__detail--sectionDescription'>
               <article className='characterDetail--section__detail--sectionDescription__container'>
-                Description
+                <p className='characterDetail--section__detail--sectionDescription__container--title'>
+                  Descripción física
+                </p>
                 <article className='characterDetail--section__detail--sectionDescription__container--characteristics'>
-                  <p className='characterDetail--section__detail--sectionDescription__container--characteristics__breed'>
-                    {props.character.descriptionBreed}
-                  </p>
-                  <p className='characterDetail--section__detail--sectionDescription__container--characteristics__genres'>
-                    {props.character.descriptionGenres}
-                  </p>
-                  <p className='characterDetail--section__detail--sectionDescription__container--characteristics__hair'>
-                    {props.character.descriptionHairColour}
-                  </p>
-                  <p className='characterDetail--section__detail--sectionDescription__container--characteristics__eyes'>
-                    {props.character.descriptionEyesColour}
-                  </p>
+                  <div className='characterDetail--section__detail--sectionDescription__container--characteristics__container'>
+                    Especie
+                    <p className='characterDetail--section__detail--sectionDescription__container--characteristics__container--breed'>
+                      {props.character.descriptionBreed}
+                    </p>
+                  </div>
+                  <div className='characterDetail--section__detail--sectionDescription__container--characteristics__container'>
+                    Género
+                    <p className='characterDetail--section__detail--sectionDescription__container--characteristics__container--genres'>
+                      {props.character.descriptionGenres}
+                    </p>
+                  </div>
+                  <div className='characterDetail--section__detail--sectionDescription__container--characteristics__container'>
+                    Color de pelo
+                    <p className='characterDetail--section__detail--sectionDescription__container--characteristics__container--hair'>
+                      {props.character.descriptionHairColour}
+                    </p>
+                  </div>
+                  <div className='characterDetail--section__detail--sectionDescription__container--characteristics__container'>
+                    Color de ojos
+                    <p className='characterDetail--section__detail--sectionDescription__container--characteristics__container--eyes'>
+                      {props.character.descriptionEyesColour}
+                    </p>
+                  </div>
                 </article>
               </article>
             </div>
             <div className='characterDetail--section__detail--sectionHouse'>
               <article className='characterDetail--section__detail--sectionHouse__container'>
-                Howarts house:{' '}
+                Howarts house{' '}
                 <p className='characterDetail--section__detail--sectionHouse__container--option'>
                   {props.character.howartsHouse === '' ? (
                     <span className='characterDetail--section__detail--sectionHouse__container--option__title'>
@@ -85,7 +105,7 @@ const CharacterDetail = (props) => {
             </div>
             <div className='characterDetail--section__detail--sectionPatronus'>
               <article className='characterDetail--section__detail--sectionPatronus__container'>
-                Patronus:
+                Patronus
                 <p className='characterDetail--section__detail--sectionPatronus__container--title'>
                   {props.character.patronus}
                 </p>
