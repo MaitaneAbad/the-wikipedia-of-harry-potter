@@ -56,7 +56,6 @@
         width: 50%;
       }
       &--sectionName {
-        font-size: large;
         margin: 5px auto;
         text-transform: uppercase;
         text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa,
@@ -64,10 +63,14 @@
           0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3),
           0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25),
           0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+
         &__title {
-          font-size: 30px;
+          font-size: 35px;
           line-height: 35px;
           margin-bottom: 30px;
+          @media (min-width: 768px) {
+            font-size: 40px;
+          }
         }
       }
       &--sectionNickname {
@@ -79,6 +82,12 @@
           align-items: center;
           justify-content: space-between;
           margin: 10px;
+          @media (min-width: 768px) {
+            font-size: 35px;
+          }
+          @media (min-width: 1024px) {
+            font-size: 45px;
+          }
           &--title {
           }
         }
@@ -92,6 +101,12 @@
           justify-content: space-between;
           align-items: center;
           margin: 10px;
+          @media (min-width: 768px) {
+            font-size: 35px;
+          }
+          @media (min-width: 1024px) {
+            font-size: 45px;
+          }
           &--title {
             text-align: end;
           }
@@ -105,6 +120,12 @@
           align-items: center;
           column-gap: 20px;
           margin: 10px;
+          @media (min-width: 768px) {
+            font-size: 35px;
+          }
+          @media (min-width: 1024px) {
+            font-size: 45px;
+          }
           &--title {
           }
         }
@@ -116,13 +137,17 @@
           column-gap: 20px;
           &--title {
             font-size: 23px;
-            margin: 20px 5px 5px;
+            margin: 30px 5px 5px;
             text-transform: uppercase;
+
             text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa,
               0 5px 0 #acacac, 0 6px 1px rgba(0, 0, 0, 0.1),
               0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3),
               0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25),
               0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+            @media (min-width: 768px) {
+              font-size: 35px;
+            }
           }
 
           &--characteristics {
@@ -137,6 +162,12 @@
               border-bottom: 2px rgb(105, 105, 105) solid;
               margin: 5px 0;
               padding-bottom: 3px;
+              @media (min-width: 768px) {
+                font-size: 35px;
+              }
+              @media (min-width: 1024px) {
+                font-size: 45px;
+              }
               &--breed {
                 text-align: end;
               }
@@ -162,6 +193,12 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
+          @media (min-width: 768px) {
+            font-size: 35px;
+          }
+          @media (min-width: 1024px) {
+            font-size: 45px;
+          }
           &--option {
             &__title {
             }
@@ -176,6 +213,12 @@
           column-gap: 20px;
           align-items: center;
           margin: 10px;
+          @media (min-width: 768px) {
+            font-size: 35px;
+          }
+          @media (min-width: 1024px) {
+            font-size: 45px;
+          }
           &--title {
             margin: 5px;
           }
