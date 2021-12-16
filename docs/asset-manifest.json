@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.6ce95235.chunk.css",
+    "main.css": "./static/css/main.af35b59b.chunk.css",
     "main.js": "./static/js/main.3c1b6f0b.chunk.js",
     "main.js.map": "./static/js/main.3c1b6f0b.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.7ad783a2.js",
@@ -8,7 +8,7 @@
     "static/js/2.0f0735ca.chunk.js": "./static/js/2.0f0735ca.chunk.js",
     "static/js/2.0f0735ca.chunk.js.map": "./static/js/2.0f0735ca.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.6ce95235.chunk.css.map": "./static/css/main.6ce95235.chunk.css.map",
+    "static/css/main.af35b59b.chunk.css.map": "./static/css/main.af35b59b.chunk.css.map",
     "static/js/2.0f0735ca.chunk.js.LICENSE.txt": "./static/js/2.0f0735ca.chunk.js.LICENSE.txt",
     "static/media/App.scss": "./static/media/MinistryOfMAgic.c1d7e8f3.jpg",
     "static/media/accio.f04180b6.gif": "./static/media/accio.f04180b6.gif",
@@ -75,7 +75,7 @@
   "entrypoints": [
     "static/js/runtime-main.7ad783a2.js",
     "static/js/2.0f0735ca.chunk.js",
-    "static/css/main.6ce95235.chunk.css",
+    "static/css/main.af35b59b.chunk.css",
     "static/js/main.3c1b6f0b.chunk.js"
   ]
 }
