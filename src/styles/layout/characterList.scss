@@ -61,49 +61,9 @@
           display: flex;
           flex-direction: column;
           align-items: end;
-
+          color: whitesmoke;
           &__name {
-            color: whitesmoke;
             margin-top: 25px;
-          }
-          &__nickName {
-            color: whitesmoke;
-            &--nick {
-            }
-          }
-          &__status {
-          }
-          &__statusMarital {
-          }
-          &__sectionBlood {
-          }
-          &__blood {
-          }
-          &__sectionChildren {
-          }
-          &__childrens {
-            &--childList {
-              &__name {
-              }
-            }
-          }
-          &__sectionDescription {
-          }
-          &__breed {
-          }
-          &__genre {
-          }
-          &__hairColour {
-          }
-          &__eyesColour {
-          }
-          &__sectionHouse {
-          }
-          &__house {
-          }
-          &__sectionPatronus {
-          }
-          &__patronus {
           }
         }
         &--paragraph {

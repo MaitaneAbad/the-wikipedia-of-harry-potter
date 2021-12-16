@@ -59,7 +59,6 @@ const App = () => {
         </Route>
         <Route path='/character/:id/'>
           <CharacterDetail character={characterDetail} />
-          <Footer />
         </Route>
         <Route exact path='/'>
           <main className='main'>
