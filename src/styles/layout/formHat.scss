@@ -63,8 +63,8 @@
       &__label {
         border-radius: 10px;
         background-color: rgba(0, 0, 0, 0.884);
-        padding: 5px;
-        margin: 0 0 35px 0;
+        padding: 5px 10px;
+        margin: 0 0 25px 0;
         &--option {
           display: flex;
           margin: auto;
@@ -72,7 +72,7 @@
         &--img {
           border-radius: 10px;
           margin: 5px;
-          width: 100px;
+          width: 130px;
           &:hover {
             box-shadow: 5px 2.5px 10px 2.5px rgb(160, 158, 158);
           }
@@ -100,7 +100,6 @@
       }
       &__question {
         display: inline-block;
-        width: 90%;
         border-radius: 10px;
         margin: 10px 0;
         color: #000;
@@ -119,13 +118,15 @@
         background-color: rgba(0, 0, 0, 0.884);
         padding: 5px;
         margin: 15px 0 25px 0;
+        word-break: break-word;
+        max-width: 150px;
         &--option {
           display: flex;
           margin: auto;
         }
         &--img {
-          width: 120px;
-          height: 80px;
+          width: 135px;
+          height: 85px;
           border-radius: 10px;
           margin: 5px;
 
@@ -218,7 +219,7 @@
       &__label {
         border-radius: 10px;
         background-color: rgba(0, 0, 0, 0.884);
-        padding: 5px;
+        padding: 5px 10px;
         margin: 10px 0 35px 0;
         &--option {
           display: flex;
@@ -228,10 +229,10 @@
           }
         }
         &--img {
-          width: 130px;
+          width: 150px;
           border-radius: 10px;
           margin: 5px;
-          height: 85px;
+          height: 90px;
           &:hover {
             box-shadow: 5px 2.5px 10px 2.5px rgb(160, 158, 158);
           }
@@ -331,15 +332,17 @@
         background-color: rgba(0, 0, 0, 0.884);
         padding: 5px;
         margin: 15px 0 5px 0;
+        word-break: break-word;
+        min-width: 200px;
         &--option {
           display: flex;
           margin: auto;
         }
         &--img {
-          width: 115px;
+          width: 140px;
           border-radius: 10px;
           margin: 5px;
-          height: 95px;
+          height: 110px;
 
           &:hover {
             box-shadow: 5px 2.5px 10px 2.5px rgb(160, 158, 158);
@@ -382,6 +385,8 @@
       flex-wrap: wrap;
       column-gap: 40px;
       &__label {
+        word-break: break-word;
+        min-width: 200px;
         border-radius: 10px;
         background-color: rgba(0, 0, 0, 0.884);
         padding: 5px;
@@ -391,10 +396,10 @@
           margin: auto;
         }
         &--img {
-          width: 110px;
+          width: 140px;
           border-radius: 10px;
           margin: 5px;
-          height: 80px;
+          height: 110px;
           &:hover {
             box-shadow: 5px 2.5px 10px 2.5px rgb(160, 158, 158);
           }
@@ -440,16 +445,16 @@
         margin: 15px 0 5px 0;
         border-radius: 10px;
         background-color: rgba(0, 0, 0, 0.884);
-        padding: 5px;
+        padding: 5px 10px;
         &--option {
           display: flex;
           margin: auto;
         }
         &--img {
-          width: 110px;
+          width: 140px;
           border-radius: 10px;
           margin: 5px;
-          height: 85px;
+          height: 120px;
 
           &:hover {
             box-shadow: 5px 2.5px 10px 2.5px rgb(160, 158, 158);
@@ -542,16 +547,16 @@
         margin: 15px 0 5px 0;
         border-radius: 10px;
         background-color: rgba(0, 0, 0, 0.884);
-        padding: 5px;
+        padding: 5px 10px;
         &--option {
           display: flex;
           margin: auto;
         }
         &--img {
-          width: 110px;
+          width: 150px;
           border-radius: 10px;
           margin: 5px;
-          height: 90px;
+          height: 130px;
 
           &:hover {
             box-shadow: 5px 2.5px 10px 2.5px rgb(160, 158, 158);

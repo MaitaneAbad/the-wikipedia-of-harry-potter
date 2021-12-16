@@ -41,7 +41,7 @@ const SecondQuestion = (props) => {
             alt='imagen de defensa contras las artes oscuras'
             title='imagen de de defensa contras las artes oscuras'
           ></img>
-          <p>defensa contra las artes oscuras</p>
+          <p>Defensa contra las artes oscuras</p>
         </label>
         <label
           className='formHat__secondQuestion--fieldsetInputs__label'
