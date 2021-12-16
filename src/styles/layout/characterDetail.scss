@@ -4,6 +4,7 @@
   background-size: cover;
   background-position: center;
   padding: 30px 0;
+  font-size: 20px;
   &--link {
     text-align: end;
   }
@@ -61,7 +62,6 @@
             &__hair {
             }
             &__eyes {
-              word-break: break-all;
             }
           }
         }
