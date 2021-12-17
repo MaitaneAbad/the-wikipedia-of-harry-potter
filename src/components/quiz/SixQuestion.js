@@ -25,6 +25,7 @@ const SixQuestion = (props) => {
           htmlFor='sweetPumpkin'
         >
           <input
+            required=''
             className='formHat__sixQuestion--fieldsetInputs__label--option'
             type='radio'
             id='sweetPumpkin'
@@ -45,6 +46,7 @@ const SixQuestion = (props) => {
           htmlFor='sweetChocolate'
         >
           <input
+            required=''
             className='formHat__sixQuestion--fieldsetInputs__label--option'
             type='radio'
             id='sweetChocolate'
@@ -65,6 +67,7 @@ const SixQuestion = (props) => {
           htmlFor='sweetGelatine'
         >
           <input
+            required=''
             className='formHat__sixQuestion--fieldsetInputs__label--option'
             type='radio'
             id='sweetGelatine'
@@ -85,6 +88,7 @@ const SixQuestion = (props) => {
           htmlFor='sweetTablets'
         >
           <input
+            required=''
             className='formHat__sixQuestion--fieldsetInputs__label--option'
             type='radio'
             id='sweetTablets'

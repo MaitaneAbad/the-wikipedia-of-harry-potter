@@ -4,8 +4,6 @@ import styled from 'styled-components';
 
 import '../styles/layout/menu.scss';
 const Menu = ({ open, handleClick }) => {
-  console.log(handleClick);
-
   const NavbarWrapper = styled.nav`
     right: ${(props) => (props.open ? '0' : '-100%')};
   `;

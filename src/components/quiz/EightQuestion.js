@@ -26,6 +26,7 @@ const EightQuestion = (props) => {
           htmlFor='protectHermione'
         >
           <input
+            required=''
             className='formHat__eightQuestion--fieldsetInputs__label--option'
             type='radio'
             id='protectHermione'
@@ -46,6 +47,7 @@ const EightQuestion = (props) => {
           htmlFor='protectAlbus'
         >
           <input
+            required=''
             className='formHat__eightQuestion--fieldsetInputs__label--option'
             type='radio'
             id='protectAlbus'
@@ -66,6 +68,7 @@ const EightQuestion = (props) => {
           htmlFor='protectSirius'
         >
           <input
+            required=''
             className='formHat__eightQuestion--fieldsetInputs__label--option'
             type='radio'
             id='protectSirius'
@@ -86,6 +89,7 @@ const EightQuestion = (props) => {
           htmlFor='protectSnape'
         >
           <input
+            required=''
             className='formHat__eightQuestion--fieldsetInputs__label--option'
             type='radio'
             id='protectSnape'
@@ -106,6 +110,7 @@ const EightQuestion = (props) => {
           htmlFor='protectMcgonagall'
         >
           <input
+            required=''
             className='formHat__eightQuestion--fieldsetInputs__label--option'
             type='radio'
             id='protectMcgonagall'

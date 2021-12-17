@@ -14,7 +14,6 @@ import TenQuestion from './quiz/TenQuestion';
 import ButtonResponse from './quiz/ButtonResponse';
 import { Link, Route } from 'react-router-dom';
 import { useState } from 'react';
-
 const CharacterDetail = (props) => {
   const [classroom, setClassroom] = useState(' ');
   const [pet, setPet] = useState(' ');
@@ -40,6 +39,11 @@ const CharacterDetail = (props) => {
   const [loyality, setLoyality] = useState(0);
   const [hardWork, setHardWork] = useState(0);
 
+  const [gryffindorHTML, setGryffindorHTML] = useState('hidden');
+  const [slytherinHTML, setSlytherinHTML] = useState('hidden');
+  const [ravenclawHTML, setRavenclawHTML] = useState('hidden');
+  const [hufflepuffHTML, setHufflepufHTML] = useState('hidden');
+  const [textRequired, setTextRequired] = useState('hidden');
   const handlePet = (ev) => {
     setPet(ev.target.value);
     const value = ev.target.value;
@@ -117,7 +121,6 @@ const CharacterDetail = (props) => {
       default:
         break;
     }
-    console.log(ambition);
   };
 
   const handleInvention = (ev) => {
@@ -392,6 +395,9 @@ const CharacterDetail = (props) => {
   };
 
   const handleButton = () => {
+    indexHouse();
+  };
+  function indexHouse() {
     let gryffindorPoints = bravery + friendship + honour;
     let slytherinPoints = cunning + ambition;
     let ravenclawPoints = intelligence + competition + witness;
@@ -405,80 +411,89 @@ const CharacterDetail = (props) => {
     console.log(housesPoints);
     let winnerHousePoints = 0;
     let winnerHouseIndex = 0;
+
     for (let i = 0; i < housesPoints.length; i++) {
       if (housesPoints[i] > winnerHousePoints) {
         winnerHousePoints = housesPoints[i];
         winnerHouseIndex++;
       }
     }
-
     console.log(winnerHouseIndex);
     switch (winnerHouseIndex) {
+      case 0:
+        console.log('Comprueba que el test está completo');
+        setTextRequired('');
+        break;
       case 1:
         console.log('gryffindor');
-        gryffindorHouse();
+        //setGryffindorHTML('');
+        setTextRequired('hidden');
         break;
       case 2:
         console.log('slytherin');
-
+        //setSlytherinHTML('')
+        setTextRequired('hidden');
         break;
       case 3:
         console.log('ravenclaw');
+        //setRavenclawHTML('')
+        setTextRequired('hidden');
         break;
       case 4:
         console.log('hufflepuf');
+        //setHufflepufHTML('')
+        setTextRequired('hidden');
         break;
       default:
         break;
     }
+  }
 
-    console.log(winnerHousePoints);
-  };
-
-  const gryffindorHouse = () => {
-    console.log('html gryffindor');
-    return (
-      <>
-        <Link to='/quiz/house'>
-          <div className='modal'>
-            <div className='modal__window'>
-              <div className='modal__window--content'>
-                <header className='modal__window--content__header'>
-                  <h2 className='modal__window--content__header--title'>
-                    Gryffindor
-                  </h2>
-                  <Link to='/quiz'>
-                    <span className='modal__window--content__header--close'>
-                      <i class='fas fa-times-circle'></i>
-                    </span>
-                  </Link>
-                </header>
-                <div className='modal__window--content__detail'>
-                  <img
-                    className='modal__window--content__detail--img'
-                    src={gryffindor}
-                    alt='Autobus noctámbulo para volver atrás'
-                    title='Autobus noctámbulo para volver atrás'
-                  />
-                  <p className='modal__window--content__detail--paragraph'>
-                    Tienes coraje y valentía. Un buen miembro de Gryffindor
-                    tiene gran osadía, temple y caballerosidad. Son capaces de
-                    todo por defender en lo que creen y nunca se dan por
-                    vencidos. También son capaces de romper las reglas si es
-                    necesario y les encantan los retos, cuanto más difíciles,
-                    mejor.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Link>
-      </>
-    );
-  };
+  // const gryffindorHouse = () => {
+  //   console.log('html gryffindor');
+  //   return (
+  //     <>
+  //       <Link to='/quiz/house'>
+  //         <div className='modal'>
+  //           <div className='modal__window'>
+  //             <div className='modal__window--content'>
+  //               <header className='modal__window--content__header'>
+  //                 <h2 className='modal__window--content__header--title'>
+  //                   Gryffindor
+  //                 </h2>
+  //                 <Link to='/quiz'>
+  //                   <span className='modal__window--content__header--close'>
+  //                     <i class='fas fa-times-circle'></i>
+  //                   </span>
+  //                 </Link>
+  //               </header>
+  //               <div className='modal__window--content__detail'>
+  //                 <img
+  //                   className='modal__window--content__detail--img'
+  //                   src={gryffindor}
+  //                   alt='Autobus noctámbulo para volver atrás'
+  //                   title='Autobus noctámbulo para volver atrás'
+  //                 />
+  //                 <p className='modal__window--content__detail--paragraph'>
+  //                   Tienes coraje y valentía. Un buen miembro de Gryffindor
+  //                   tiene gran osadía, temple y caballerosidad. Son capaces de
+  //                   todo por defender en lo que creen y nunca se dan por
+  //                   vencidos. También son capaces de romper las reglas si es
+  //                   necesario y les encantan los retos, cuanto más difíciles,
+  //                   mejor.
+  //                 </p>
+  //               </div>
+  //             </div>
+  //           </div>
+  //         </div>
+  //       </Link>
+  //     </>
+  //   );
+  // };
   const handlePrevent = (ev) => {
     ev.preventDefault();
   };
+
   return (
     <>
       <Link to='/'>
@@ -511,48 +526,154 @@ const CharacterDetail = (props) => {
           handleTransport={handleTransport}
           transport={transport}
         />{' '}
-        <Link to='/quiz/house'>
-          <ButtonResponse handleButton={handleButton} />
-        </Link>
-        <Route path='/quiz/house'>
-          <section>
-            {/* <Link to='/quiz/house'>
-              <div className='modal'>
-                <div className='modal__window'>
-                  <div className='modal__window--content'>
-                    <header className='modal__window--content__header'>
-                      <h2 className='modal__window--content__header--title'>
-                        Gryffindor
-                      </h2>
-                      <Link to='/quiz'>
-                        <span className='modal__window--content__header--close'>
-                          <i class='fas fa-times-circle'></i>
-                        </span>
-                      </Link>
-                    </header>
-                    <div className='modal__window--content__detail'>
-                      <img
-                        className='modal__window--content__detail--img'
-                        src={gryffindor}
-                        alt='Autobus noctámbulo para volver atrás'
-                        title='Autobus noctámbulo para volver atrás'
-                      />
-                      <p className='modal__window--content__detail--paragraph'>
-                        Tienes coraje y valentía. Un buen miembro de Gryffindor
-                        tiene gran osadía, temple y caballerosidad. Son capaces
-                        de todo por defender en lo que creen y nunca se dan por
-                        vencidos. También son capaces de romper las reglas si es
-                        necesario y les encantan los retos, cuanto más
-                        difíciles, mejor.
-                      </p>
-                    </div>
+        <ButtonResponse handleButton={handleButton} />
+        <section>
+          <article className={gryffindorHTML}>
+            <div className={`modal ${gryffindorHTML}`}>
+              <div className='modal__window'>
+                <div className='modal__window--content'>
+                  <header className='modal__window--content__header'>
+                    <h2 className='modal__window--content__header--title'>
+                      Gryffindor
+                    </h2>
+                    <a href='javascript:location.reload()'>
+                      <span className='modal__window--content__header--close'>
+                        <i class='fas fa-times-circle'></i>
+                      </span>
+                    </a>
+                  </header>
+                  <div className='modal__window--content__detail'>
+                    <img
+                      className='modal__window--content__detail--img'
+                      src={gryffindor}
+                      alt='Autobus noctámbulo para volver atrás'
+                      title='Autobus noctámbulo para volver atrás'
+                    />
+                    <p className='modal__window--content__detail--paragraph'>
+                      Tienes coraje y valentía. Un buen miembro de Gryffindor
+                      tiene gran osadía, temple y caballerosidad. Son capaces de
+                      todo por defender en lo que creen y nunca se dan por
+                      vencidos. También son capaces de romper las reglas si es
+                      necesario y les encantan los retos, cuanto más difíciles,
+                      mejor.
+                    </p>
                   </div>
                 </div>
               </div>
-            </Link> */}
-            {/* {houses()} */}
-          </section>
-        </Route>
+            </div>
+          </article>
+        </section>
+        <section>
+          <article className={slytherinHTML}>
+            <div className={`modal ${slytherinHTML}`}>
+              <div className='modal__window'>
+                <div className='modal__window--content'>
+                  <header className='modal__window--content__header'>
+                    <h2 className='modal__window--content__header--title'>
+                      Gryffindor
+                    </h2>
+                    <a href='javascript:location.reload()'>
+                      <span className='modal__window--content__header--close'>
+                        <i class='fas fa-times-circle'></i>
+                      </span>
+                    </a>
+                  </header>
+                  <div className='modal__window--content__detail'>
+                    <img
+                      className='modal__window--content__detail--img'
+                      src={gryffindor}
+                      alt='Autobus noctámbulo para volver atrás'
+                      title='Autobus noctámbulo para volver atrás'
+                    />
+                    <p className='modal__window--content__detail--paragraph'>
+                      Tienes coraje y valentía. Un buen miembro de Gryffindor
+                      tiene gran osadía, temple y caballerosidad. Son capaces de
+                      todo por defender en lo que creen y nunca se dan por
+                      vencidos. También son capaces de romper las reglas si es
+                      necesario y les encantan los retos, cuanto más difíciles,
+                      mejor.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+        <section>
+          <article className={ravenclawHTML}>
+            <div className={`modal ${ravenclawHTML}`}>
+              <div className='modal__window'>
+                <div className='modal__window--content'>
+                  <header className='modal__window--content__header'>
+                    <h2 className='modal__window--content__header--title'>
+                      Gryffindor
+                    </h2>
+                    <a href='javascript:location.reload()'>
+                      <span className='modal__window--content__header--close'>
+                        <i class='fas fa-times-circle'></i>
+                      </span>
+                    </a>
+                  </header>
+                  <div className='modal__window--content__detail'>
+                    <img
+                      className='modal__window--content__detail--img'
+                      src={gryffindor}
+                      alt='Autobus noctámbulo para volver atrás'
+                      title='Autobus noctámbulo para volver atrás'
+                    />
+                    <p className='modal__window--content__detail--paragraph'>
+                      Tienes coraje y valentía. Un buen miembro de Gryffindor
+                      tiene gran osadía, temple y caballerosidad. Son capaces de
+                      todo por defender en lo que creen y nunca se dan por
+                      vencidos. También son capaces de romper las reglas si es
+                      necesario y les encantan los retos, cuanto más difíciles,
+                      mejor.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+        <section>
+          <article className={hufflepuffHTML}>
+            <div className={`modal ${hufflepuffHTML}`}>
+              <div className='modal__window'>
+                <div className='modal__window--content'>
+                  <header className='modal__window--content__header'>
+                    <h2 className='modal__window--content__header--title'>
+                      Gryffindor
+                    </h2>
+                    <a href='javascript:location.reload()'>
+                      <span className='modal__window--content__header--close'>
+                        <i class='fas fa-times-circle'></i>
+                      </span>
+                    </a>
+                  </header>
+                  <div className='modal__window--content__detail'>
+                    <img
+                      className='modal__window--content__detail--img'
+                      src={gryffindor}
+                      alt='Autobus noctámbulo para volver atrás'
+                      title='Autobus noctámbulo para volver atrás'
+                    />
+                    <p className='modal__window--content__detail--paragraph'>
+                      Tienes coraje y valentía. Un buen miembro de Gryffindor
+                      tiene gran osadía, temple y caballerosidad. Son capaces de
+                      todo por defender en lo que creen y nunca se dan por
+                      vencidos. También son capaces de romper las reglas si es
+                      necesario y les encantan los retos, cuanto más difíciles,
+                      mejor.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+        <article className={textRequired}>
+          <p>Comprueba que el test esté completo</p>
+        </article>
       </form>
     </>
   );

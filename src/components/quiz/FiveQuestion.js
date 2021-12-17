@@ -27,6 +27,7 @@ const FiveQuestion = (props) => {
           htmlFor='teacherSybill'
         >
           <input
+            required=''
             className='formHat__fiveQuestion--fieldsetInputs__label--option'
             type='radio'
             id='teacherSybill'
@@ -47,6 +48,7 @@ const FiveQuestion = (props) => {
           htmlFor='teacherLupin'
         >
           <input
+            required=''
             className='formHat__fiveQuestion--fieldsetInputs__label--option'
             type='radio'
             id='teacherLupin'
@@ -67,6 +69,7 @@ const FiveQuestion = (props) => {
           htmlFor='teacherSnape'
         >
           <input
+            required=''
             className='formHat__fiveQuestion--fieldsetInputs__label--option'
             type='radio'
             id='teacherSnape'
@@ -87,6 +90,7 @@ const FiveQuestion = (props) => {
           htmlFor='teacherOjoloco'
         >
           <input
+            required=''
             className='formHat__fiveQuestion--fieldsetInputs__label--option'
             type='radio'
             id='teacherOjoloco'
@@ -107,6 +111,7 @@ const FiveQuestion = (props) => {
           htmlFor='teacherDumbledore'
         >
           <input
+            required=''
             className='formHat__fiveQuestion--fieldsetInputs__label--option'
             type='radio'
             id='teacherDumbledore'
@@ -127,6 +132,7 @@ const FiveQuestion = (props) => {
           htmlFor='teacherMcgonagall'
         >
           <input
+            required=''
             className='formHat__fiveQuestion--fieldsetInputs__label--option'
             type='radio'
             id='teacherMcgonagall'
@@ -147,6 +153,7 @@ const FiveQuestion = (props) => {
           htmlFor='teacherHagrid'
         >
           <input
+            required=''
             className='formHat__fiveQuestion--fieldsetInputs__label--option'
             type='radio'
             id='teacherHagrid'

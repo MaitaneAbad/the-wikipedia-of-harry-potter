@@ -25,6 +25,7 @@ const FirstQuestion = (props) => {
           htmlFor='owl'
         >
           <input
+            required=''
             className='formHat__firstQuestion--fieldsetInputs__label--option'
             type='radio'
             id='owl'
@@ -44,6 +45,7 @@ const FirstQuestion = (props) => {
           htmlFor='rat'
         >
           <input
+            required=''
             className='formHat__firstQuestion--fieldsetInputs__label--option'
             type='radio'
             id='rat'
@@ -63,6 +65,7 @@ const FirstQuestion = (props) => {
           htmlFor='toad'
         >
           <input
+            required=''
             className='formHat__firstQuestion--fieldsetInputs__label--option'
             type='radio'
             id='toad'
@@ -82,6 +85,7 @@ const FirstQuestion = (props) => {
           htmlFor='cat'
         >
           <input
+            required=''
             className='formHat__firstQuestion--fieldsetInputs__label--option'
             type='radio'
             id='cat'

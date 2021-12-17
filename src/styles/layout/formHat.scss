@@ -660,3 +660,8 @@
     }
   }
 }
+.hidden {
+  height: 0;
+  margin-bottom: 0px;
+  overflow: hidden;
+}

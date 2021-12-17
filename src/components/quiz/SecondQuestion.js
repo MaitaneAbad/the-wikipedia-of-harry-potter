@@ -28,6 +28,7 @@ const SecondQuestion = (props) => {
           htmlFor='sessionDefence'
         >
           <input
+            required=''
             className='formHat__secondQuestion--fieldsetInputs__label--option'
             type='radio'
             id='sessionDefence'
@@ -48,6 +49,7 @@ const SecondQuestion = (props) => {
           htmlFor='sessionPotions'
         >
           <input
+            required=''
             className='formHat__secondQuestion--fieldsetInputs__label--option'
             type='radio'
             id='sessionPotions'
@@ -68,6 +70,7 @@ const SecondQuestion = (props) => {
           htmlFor='sessionMagicalCreatures'
         >
           <input
+            required=''
             className='formHat__secondQuestion--fieldsetInputs__label--option'
             type='radio'
             id='sessionMagicalCreatures'
@@ -88,6 +91,7 @@ const SecondQuestion = (props) => {
           htmlFor='sessionHerbology'
         >
           <input
+            required=''
             className='formHat__secondQuestion--fieldsetInputs__label--option'
             type='radio'
             id='sessionHerbology'
@@ -108,6 +112,7 @@ const SecondQuestion = (props) => {
           htmlFor='sessionDivination'
         >
           <input
+            required=''
             className='formHat__secondQuestion--fieldsetInputs__label--option'
             type='radio'
             id='sessionDivination'

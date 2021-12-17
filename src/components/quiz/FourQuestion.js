@@ -28,6 +28,7 @@ const FourQuestion = (props) => {
           htmlFor='spellAccio'
         >
           <input
+            required=''
             className='formHat__fourQuestion--fieldsetInputs__label--option'
             type='radio'
             id='spellAccio'
@@ -48,6 +49,7 @@ const FourQuestion = (props) => {
           htmlFor='spellExpecto'
         >
           <input
+            required=''
             className='formHat__fourQuestion--fieldsetInputs__label--option'
             type='radio'
             id='spellExpecto'
@@ -68,6 +70,7 @@ const FourQuestion = (props) => {
           htmlFor='spellDesmaius'
         >
           <input
+            required=''
             className='formHat__fourQuestion--fieldsetInputs__label--option'
             type='radio'
             id='spellDesmaius'
@@ -88,6 +91,7 @@ const FourQuestion = (props) => {
           htmlFor='spellObliviate'
         >
           <input
+            required=''
             className='formHat__fourQuestion--fieldsetInputs__label--option'
             type='radio'
             id='spellObliviate'
@@ -108,6 +112,7 @@ const FourQuestion = (props) => {
           htmlFor='spellBombarda'
         >
           <input
+            required=''
             className='formHat__fourQuestion--fieldsetInputs__label--option'
             type='radio'
             id='spellBombarda'
@@ -128,6 +133,7 @@ const FourQuestion = (props) => {
           htmlFor='spellImperio'
         >
           <input
+            required=''
             className='formHat__fourQuestion--fieldsetInputs__label--option'
             type='radio'
             id='spellImperio'

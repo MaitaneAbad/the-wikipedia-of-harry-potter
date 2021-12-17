@@ -20,6 +20,7 @@ const NineQuestion = (props) => {
           htmlFor='qualitie1'
         >
           <input
+            required=''
             className='formHat__nineQuestion--fieldsetInputs__label--option'
             type='radio'
             id='qualitie1'
@@ -34,6 +35,7 @@ const NineQuestion = (props) => {
           htmlFor='qualitie2'
         >
           <input
+            required=''
             className='formHat__nineQuestion--fieldsetInputs__label--option'
             type='radio'
             id='qualitie2'
@@ -48,6 +50,7 @@ const NineQuestion = (props) => {
           htmlFor='qualitie3'
         >
           <input
+            required=''
             className='formHat__nineQuestion--fieldsetInputs__label--option'
             type='radio'
             id='qualitie3'
@@ -62,6 +65,7 @@ const NineQuestion = (props) => {
           htmlFor='qualitie4'
         >
           <input
+            required=''
             className='formHat__nineQuestion--fieldsetInputs__label--option'
             type='radio'
             id='qualitie4'

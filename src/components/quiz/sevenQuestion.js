@@ -26,6 +26,7 @@ const SevenQuestion = (props) => {
           htmlFor='objectTurner'
         >
           <input
+            required=''
             className='formHat__sevenQuestion--fieldsetInputs__label--option'
             type='radio'
             id='objectTurner'
@@ -46,6 +47,7 @@ const SevenQuestion = (props) => {
           htmlFor='objectFelicis'
         >
           <input
+            required=''
             className='formHat__sevenQuestion--fieldsetInputs__label--option'
             type='radio'
             id='objectFelicis'
@@ -66,6 +68,7 @@ const SevenQuestion = (props) => {
           htmlFor='objectRecorder'
         >
           <input
+            required=''
             className='formHat__sevenQuestion--fieldsetInputs__label--option'
             type='radio'
             id='objectRecorder'
@@ -86,6 +89,7 @@ const SevenQuestion = (props) => {
           htmlFor='objectMap'
         >
           <input
+            required=''
             className='formHat__sevenQuestion--fieldsetInputs__label--option'
             type='radio'
             id='objectMap'
@@ -106,6 +110,7 @@ const SevenQuestion = (props) => {
           htmlFor='objectInvisibility'
         >
           <input
+            required=''
             className='formHat__sevenQuestion--fieldsetInputs__label--option'
             type='radio'
             id='objectInvisibility'
