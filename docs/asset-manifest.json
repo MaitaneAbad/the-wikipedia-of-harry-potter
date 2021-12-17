@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "./static/css/main.ebf3e230.chunk.css",
-    "main.js": "./static/js/main.b00956dc.chunk.js",
-    "main.js.map": "./static/js/main.b00956dc.chunk.js.map",
+    "main.css": "./static/css/main.ea6dc412.chunk.css",
+    "main.js": "./static/js/main.e6a47b99.chunk.js",
+    "main.js.map": "./static/js/main.e6a47b99.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.7ad783a2.js",
     "runtime-main.js.map": "./static/js/runtime-main.7ad783a2.js.map",
-    "static/js/2.0f0735ca.chunk.js": "./static/js/2.0f0735ca.chunk.js",
-    "static/js/2.0f0735ca.chunk.js.map": "./static/js/2.0f0735ca.chunk.js.map",
+    "static/js/2.6aa0545e.chunk.js": "./static/js/2.6aa0545e.chunk.js",
+    "static/js/2.6aa0545e.chunk.js.map": "./static/js/2.6aa0545e.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.ebf3e230.chunk.css.map": "./static/css/main.ebf3e230.chunk.css.map",
-    "static/js/2.0f0735ca.chunk.js.LICENSE.txt": "./static/js/2.0f0735ca.chunk.js.LICENSE.txt",
+    "static/css/main.ea6dc412.chunk.css.map": "./static/css/main.ea6dc412.chunk.css.map",
+    "static/js/2.6aa0545e.chunk.js.LICENSE.txt": "./static/js/2.6aa0545e.chunk.js.LICENSE.txt",
     "static/media/App.scss": "./static/media/MinistryOfMAgic.c1d7e8f3.jpg",
     "static/media/accio.f04180b6.gif": "./static/media/accio.f04180b6.gif",
     "static/media/admitido.db980ec2.gif": "./static/media/admitido.db980ec2.gif",
@@ -74,8 +74,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.7ad783a2.js",
-    "static/js/2.0f0735ca.chunk.js",
-    "static/css/main.ebf3e230.chunk.css",
-    "static/js/main.b00956dc.chunk.js"
+    "static/js/2.6aa0545e.chunk.js",
+    "static/css/main.ea6dc412.chunk.css",
+    "static/js/main.e6a47b99.chunk.js"
   ]
 }
