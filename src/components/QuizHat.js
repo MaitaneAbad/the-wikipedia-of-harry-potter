@@ -1,6 +1,9 @@
 import '../styles/layout/formHat.scss';
 import bus from '../images/nightBus.gif';
 import gryffindor from '../images/gryffindor.png';
+import slytherin from '../images/slytherin.png';
+import ravenclaw from '../images/ravenclaw.png';
+import hufflepuff from '../images/hufflepuff.png';
 import FirstQuestion from './quiz/FirstQuestion';
 import SecondQuestion from './quiz/SecondQuestion';
 import ThirdQuestion from './quiz/ThirdQuestion';
@@ -12,7 +15,7 @@ import EightQuestion from './quiz/EightQuestion';
 import NineQuestion from './quiz/NineQuestion';
 import TenQuestion from './quiz/TenQuestion';
 import ButtonResponse from './quiz/ButtonResponse';
-import { Link, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 const CharacterDetail = (props) => {
   const [classroom, setClassroom] = useState(' ');
@@ -426,22 +429,22 @@ const CharacterDetail = (props) => {
         break;
       case 1:
         console.log('gryffindor');
-        //setGryffindorHTML('');
+        setGryffindorHTML('');
         setTextRequired('hidden');
         break;
       case 2:
         console.log('slytherin');
-        //setSlytherinHTML('')
+        setSlytherinHTML('');
         setTextRequired('hidden');
         break;
       case 3:
         console.log('ravenclaw');
-        //setRavenclawHTML('')
+        setRavenclawHTML('');
         setTextRequired('hidden');
         break;
       case 4:
         console.log('hufflepuf');
-        //setHufflepufHTML('')
+        setHufflepufHTML('');
         setTextRequired('hidden');
         break;
       default:
@@ -493,7 +496,13 @@ const CharacterDetail = (props) => {
   const handlePrevent = (ev) => {
     ev.preventDefault();
   };
-
+  function backPage() {
+    setGryffindorHTML('hidden');
+    setRavenclawHTML('hidden');
+    setSlytherinHTML('hidden');
+    setHufflepufHTML('hidden');
+    window.location.reload();
+  }
   return (
     <>
       <Link to='/'>
@@ -529,27 +538,28 @@ const CharacterDetail = (props) => {
         <ButtonResponse handleButton={handleButton} />
         <section>
           <article className={gryffindorHTML}>
-            <div className={`modal ${gryffindorHTML}`}>
-              <div className='modal__window'>
-                <div className='modal__window--content'>
-                  <header className='modal__window--content__header'>
-                    <h2 className='modal__window--content__header--title'>
+            <div className={`modalGryffindor ${gryffindorHTML}`}>
+              <div className='modalGryffindor__window'>
+                <div className='modalGryffindor__window--content'>
+                  <header className='modalGryffindor__window--content__header'>
+                    <h2 className='modalGryffindor__window--content__header--title'>
                       Gryffindor
                     </h2>
-                    <a href='javascript:location.reload()'>
-                      <span className='modal__window--content__header--close'>
-                        <i class='fas fa-times-circle'></i>
-                      </span>
-                    </a>
+                    <span
+                      className='modalGryffindor__window--content__header--close'
+                      onClick={backPage}
+                    >
+                      <i class='fas fa-times-circle'></i>
+                    </span>
                   </header>
-                  <div className='modal__window--content__detail'>
-                    <img
-                      className='modal__window--content__detail--img'
+                  <div className='modalGryffindor__window--content__detail'>
+                    {/* <img
+                      className='modalGryffindor__window--content__detail--img'
                       src={gryffindor}
                       alt='Autobus noctámbulo para volver atrás'
                       title='Autobus noctámbulo para volver atrás'
-                    />
-                    <p className='modal__window--content__detail--paragraph'>
+                    /> */}
+                    <p className='modalGryffindor__window--content__detail--paragraph'>
                       Tienes coraje y valentía. Un buen miembro de Gryffindor
                       tiene gran osadía, temple y caballerosidad. Son capaces de
                       todo por defender en lo que creen y nunca se dan por
@@ -565,33 +575,36 @@ const CharacterDetail = (props) => {
         </section>
         <section>
           <article className={slytherinHTML}>
-            <div className={`modal ${slytherinHTML}`}>
-              <div className='modal__window'>
-                <div className='modal__window--content'>
-                  <header className='modal__window--content__header'>
-                    <h2 className='modal__window--content__header--title'>
-                      Gryffindor
+            <div className={`modalSlytherin ${slytherinHTML}`}>
+              <div className='modalSlytherin__window'>
+                <div className='modalSlytherin__window--content'>
+                  <header className='modalSlytherin__window--content__header'>
+                    <h2 className='modalSlytherin__window--content__header--title'>
+                      Slytherin
                     </h2>
-                    <a href='javascript:location.reload()'>
-                      <span className='modal__window--content__header--close'>
-                        <i class='fas fa-times-circle'></i>
-                      </span>
-                    </a>
+
+                    <span
+                      className='modal__window--content__header--close'
+                      onClick={backPage}
+                    >
+                      <i class='fas fa-times-circle'></i>
+                    </span>
                   </header>
-                  <div className='modal__window--content__detail'>
+                  <div className='modalSlytherin__window--content__detail'>
                     <img
-                      className='modal__window--content__detail--img'
-                      src={gryffindor}
+                      className='modalSlytherin__window--content__detail--img'
+                      src={slytherin}
                       alt='Autobus noctámbulo para volver atrás'
                       title='Autobus noctámbulo para volver atrás'
                     />
-                    <p className='modal__window--content__detail--paragraph'>
-                      Tienes coraje y valentía. Un buen miembro de Gryffindor
-                      tiene gran osadía, temple y caballerosidad. Son capaces de
-                      todo por defender en lo que creen y nunca se dan por
-                      vencidos. También son capaces de romper las reglas si es
-                      necesario y les encantan los retos, cuanto más difíciles,
-                      mejor.
+                    <p className='modalSlytherin__window--content__detail--paragraph'>
+                      Posees determinación, ambición, un cierto desdén por las
+                      normas, astucia, aspiraciones de grandeza y hambre de
+                      poder. Tiendes a dudar antes de actuar, con el fin de
+                      sopesar todos los posibles resultados antes de decidir
+                      exactamente lo que se debe hacer y, una vez que lo
+                      averiguas, lo consigues, dándote igual los medios para
+                      lograrlo.
                     </p>
                   </div>
                 </div>
@@ -601,33 +614,34 @@ const CharacterDetail = (props) => {
         </section>
         <section>
           <article className={ravenclawHTML}>
-            <div className={`modal ${ravenclawHTML}`}>
-              <div className='modal__window'>
-                <div className='modal__window--content'>
-                  <header className='modal__window--content__header'>
-                    <h2 className='modal__window--content__header--title'>
-                      Gryffindor
+            <div className={`modalRavenclaw ${ravenclawHTML}`}>
+              <div className='modalRavenclaw__window'>
+                <div className='modalRavenclaw__window--content'>
+                  <header className='modalRavenclaw__window--content__header'>
+                    <h2 className='modalRavenclaw__window--content__header--title'>
+                      Ravenclaw
                     </h2>
-                    <a href='javascript:location.reload()'>
-                      <span className='modal__window--content__header--close'>
-                        <i class='fas fa-times-circle'></i>
-                      </span>
-                    </a>
+                    <span
+                      className='modalRavenclaw__window--content__header--close'
+                      onClick={backPage}
+                    >
+                      <i class='fas fa-times-circle'></i>
+                    </span>
                   </header>
-                  <div className='modal__window--content__detail'>
+                  <div className='modalRavenclaw__window--content__detail'>
                     <img
-                      className='modal__window--content__detail--img'
-                      src={gryffindor}
+                      className='modalRavenclaw__window--content__detail--img'
+                      src={ravenclaw}
                       alt='Autobus noctámbulo para volver atrás'
                       title='Autobus noctámbulo para volver atrás'
                     />
-                    <p className='modal__window--content__detail--paragraph'>
-                      Tienes coraje y valentía. Un buen miembro de Gryffindor
-                      tiene gran osadía, temple y caballerosidad. Son capaces de
-                      todo por defender en lo que creen y nunca se dan por
-                      vencidos. También son capaces de romper las reglas si es
-                      necesario y les encantan los retos, cuanto más difíciles,
-                      mejor.
+                    <p className='modalRavenclaw__window--content__detail--paragraph'>
+                      La casa Ravenclaw premia el aprendizaje, la sabiduría, el
+                      ingenio, y el intelecto de sus miembros. Los Ravenclaw
+                      también se enorgullecen de ser originales en sus ideas y
+                      métodos. No es raro encontrar a estudiantes de Ravenclaw
+                      que practiquen diferentes tipos de magia que otras casas
+                      podrían tratar de evitar.
                     </p>
                   </div>
                 </div>
@@ -637,33 +651,33 @@ const CharacterDetail = (props) => {
         </section>
         <section>
           <article className={hufflepuffHTML}>
-            <div className={`modal ${hufflepuffHTML}`}>
-              <div className='modal__window'>
-                <div className='modal__window--content'>
-                  <header className='modal__window--content__header'>
-                    <h2 className='modal__window--content__header--title'>
-                      Gryffindor
+            <div className={`modalHufflepuff ${hufflepuffHTML}`}>
+              <div className='modalHufflepuff__window'>
+                <div className='modalHufflepuff__window--content'>
+                  <header className='modalHufflepuff__window--content__header'>
+                    <h2 className='modalHufflepuff__window--content__header--title'>
+                      Hufflepuff
                     </h2>
-                    <a href='javascript:location.reload()'>
-                      <span className='modal__window--content__header--close'>
-                        <i class='fas fa-times-circle'></i>
-                      </span>
-                    </a>
+
+                    <span
+                      className='modalHufflepuff__window--content__header--close'
+                      onClick={backPage}
+                    >
+                      <i class='fas fa-times-circle'></i>
+                    </span>
                   </header>
-                  <div className='modal__window--content__detail'>
+                  <div className='modalHufflepuff__window--content__detail'>
                     <img
-                      className='modal__window--content__detail--img'
-                      src={gryffindor}
+                      className='modalHufflepuff__window--content__detail--img'
+                      src={hufflepuff}
                       alt='Autobus noctámbulo para volver atrás'
                       title='Autobus noctámbulo para volver atrás'
                     />
-                    <p className='modal__window--content__detail--paragraph'>
-                      Tienes coraje y valentía. Un buen miembro de Gryffindor
-                      tiene gran osadía, temple y caballerosidad. Son capaces de
-                      todo por defender en lo que creen y nunca se dan por
-                      vencidos. También son capaces de romper las reglas si es
-                      necesario y les encantan los retos, cuanto más difíciles,
-                      mejor.
+                    <p className='modalHufflepuff__window--content__detail--paragraph'>
+                      Eres justo, leal y trabajador. Los hufflepuff son buenas
+                      personas y suelen caer bien a todo el mundo. Son
+                      pacientes, tolerantes y siempre harán todo de forma
+                      honrada, sin hacer trampas y respetando las reglas.
                     </p>
                   </div>
                 </div>
