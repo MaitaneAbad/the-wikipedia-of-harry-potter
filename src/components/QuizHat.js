@@ -17,6 +17,7 @@ import TenQuestion from './quiz/TenQuestion';
 import ButtonResponse from './quiz/ButtonResponse';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+
 const CharacterDetail = (props) => {
   const [classroom, setClassroom] = useState(' ');
   const [pet, setPet] = useState(' ');
@@ -202,7 +203,6 @@ const CharacterDetail = (props) => {
         setIntelligence(intelligence + 1);
         setHonour(honour + 1);
         setJustice(justice + 1);
-        props.cunning += 1;
         setAmbition(ambition + 1);
         break;
       case 'Albus Dumbledore':
@@ -259,6 +259,8 @@ const CharacterDetail = (props) => {
   const handleObject = (ev) => {
     setObject(ev.target.value);
     const value = ev.target.value;
+    console.log(ev.target.id);
+    console.log(value);
     switch (value) {
       case 'Giratiempos':
         setAmbition(ambition + 1);
@@ -334,6 +336,7 @@ const CharacterDetail = (props) => {
   const handleQualities = (ev) => {
     setQualitie(ev.target.value);
     const value = ev.target.value;
+    console.log(value);
     switch (value) {
       case 'Ambición, astucia y determinación':
         setAmbition(ambition + 1);
@@ -353,7 +356,8 @@ const CharacterDetail = (props) => {
       case 'Honestidad, trabajo duro y paciencia':
         setHonour(honour + 1);
         setHardWork(hardWork + 1);
-        setJustice(justice + 1);
+        setJustice(competition + 1);
+
         break;
       default:
         break;
@@ -400,17 +404,19 @@ const CharacterDetail = (props) => {
   const handleButton = () => {
     indexHouse();
   };
+  let gryffindorPoints = bravery + friendship + honour;
+  let slytherinPoints = cunning + ambition;
+  let ravenclawPoints = intelligence + competition + witness;
+  let hufflepuffPoints = justice + loyality + hardWork;
+  console.log(hufflepuffPoints);
+  let housesPoints = [
+    gryffindorPoints,
+    slytherinPoints,
+    ravenclawPoints,
+    hufflepuffPoints,
+  ];
+  console.log(housesPoints);
   function indexHouse() {
-    let gryffindorPoints = bravery + friendship + honour;
-    let slytherinPoints = cunning + ambition;
-    let ravenclawPoints = intelligence + competition + witness;
-    let hufflepuffPoints = justice + loyality + hardWork;
-    let housesPoints = [
-      gryffindorPoints,
-      slytherinPoints,
-      ravenclawPoints,
-      hufflepuffPoints,
-    ];
     console.log(housesPoints);
     let winnerHousePoints = 0;
     let winnerHouseIndex = 0;
@@ -418,7 +424,7 @@ const CharacterDetail = (props) => {
     for (let i = 0; i < housesPoints.length; i++) {
       if (housesPoints[i] > winnerHousePoints) {
         winnerHousePoints = housesPoints[i];
-        winnerHouseIndex++;
+        winnerHouseIndex = i + 1;
       }
     }
     console.log(winnerHouseIndex);
@@ -452,50 +458,10 @@ const CharacterDetail = (props) => {
     }
   }
 
-  // const gryffindorHouse = () => {
-  //   console.log('html gryffindor');
-  //   return (
-  //     <>
-  //       <Link to='/quiz/house'>
-  //         <div className='modal'>
-  //           <div className='modal__window'>
-  //             <div className='modal__window--content'>
-  //               <header className='modal__window--content__header'>
-  //                 <h2 className='modal__window--content__header--title'>
-  //                   Gryffindor
-  //                 </h2>
-  //                 <Link to='/quiz'>
-  //                   <span className='modal__window--content__header--close'>
-  //                     <i class='fas fa-times-circle'></i>
-  //                   </span>
-  //                 </Link>
-  //               </header>
-  //               <div className='modal__window--content__detail'>
-  //                 <img
-  //                   className='modal__window--content__detail--img'
-  //                   src={gryffindor}
-  //                   alt='Autobus noctámbulo para volver atrás'
-  //                   title='Autobus noctámbulo para volver atrás'
-  //                 />
-  //                 <p className='modal__window--content__detail--paragraph'>
-  //                   Tienes coraje y valentía. Un buen miembro de Gryffindor
-  //                   tiene gran osadía, temple y caballerosidad. Son capaces de
-  //                   todo por defender en lo que creen y nunca se dan por
-  //                   vencidos. También son capaces de romper las reglas si es
-  //                   necesario y les encantan los retos, cuanto más difíciles,
-  //                   mejor.
-  //                 </p>
-  //               </div>
-  //             </div>
-  //           </div>
-  //         </div>
-  //       </Link>
-  //     </>
-  //   );
-  // };
   const handlePrevent = (ev) => {
     ev.preventDefault();
   };
+
   function backPage() {
     setGryffindorHTML('hidden');
     setRavenclawHTML('hidden');
@@ -503,6 +469,7 @@ const CharacterDetail = (props) => {
     setHufflepufHTML('hidden');
     window.location.reload();
   }
+
   return (
     <>
       <Link to='/'>
@@ -553,12 +520,12 @@ const CharacterDetail = (props) => {
                     </span>
                   </header>
                   <div className='modalGryffindor__window--content__detail'>
-                    {/* <img
+                    <img
                       className='modalGryffindor__window--content__detail--img'
                       src={gryffindor}
                       alt='Autobus noctámbulo para volver atrás'
                       title='Autobus noctámbulo para volver atrás'
-                    /> */}
+                    />
                     <p className='modalGryffindor__window--content__detail--paragraph'>
                       Tienes coraje y valentía. Un buen miembro de Gryffindor
                       tiene gran osadía, temple y caballerosidad. Son capaces de

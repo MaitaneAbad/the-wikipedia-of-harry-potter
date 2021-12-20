@@ -32,7 +32,7 @@ const SevenQuestion = (props) => {
             id='objectTurner'
             name='object'
             value='Giratiempos'
-            onChange={props.handleSweet}
+            onChange={props.handleObject}
           />
           <img
             className='formHat__sevenQuestion--fieldsetInputs__label--img'
@@ -53,7 +53,7 @@ const SevenQuestion = (props) => {
             id='objectFelicis'
             name='object'
             value='Poción Felix Felicis'
-            onChange={props.handleSweet}
+            onChange={props.handleObject}
           />
           <img
             className='formHat__sevenQuestion--fieldsetInputs__label--img'
@@ -74,7 +74,7 @@ const SevenQuestion = (props) => {
             id='objectRecorder'
             name='object'
             value='Recordadora'
-            onChange={props.handleSweet}
+            onChange={props.handleObject}
           />
           <img
             className='formHat__sevenQuestion--fieldsetInputs__label--img'
@@ -95,7 +95,7 @@ const SevenQuestion = (props) => {
             id='objectMap'
             name='object'
             value='Mapa del merodeador'
-            onChange={props.handleSweet}
+            onChange={props.handleObject}
           />
           <img
             className='formHat__sevenQuestion--fieldsetInputs__label--img'
@@ -116,7 +116,7 @@ const SevenQuestion = (props) => {
             id='objectInvisibility'
             name='object'
             value='Capa de invisibilidad'
-            onChange={props.handleSweet}
+            onChange={props.handleObject}
           />
           <img
             className='formHat__sevenQuestion--fieldsetInputs__label--img'
@@ -127,9 +127,6 @@ const SevenQuestion = (props) => {
           <p>Capa de invisibilidad </p>
         </label>
       </div>
-      {/* <p className='formHat__sevenQuestion--response'>
-        Tu respuesta seleccionada es: {props.object}
-      </p> */}
     </fieldset>
   );
 };

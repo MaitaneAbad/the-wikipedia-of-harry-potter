@@ -26,6 +26,7 @@ const TenQuestion = (props) => {
           htmlFor='transportEscoba'
         >
           <input
+            required=''
             className='formHat__tenQuestion--fieldsetInputs__label--option'
             type='radio'
             id='transportEscoba'
@@ -46,6 +47,7 @@ const TenQuestion = (props) => {
           htmlFor='transportCar'
         >
           <input
+            required=''
             className='formHat__tenQuestion--fieldsetInputs__label--option'
             type='radio'
             id='transportCar'
@@ -66,6 +68,7 @@ const TenQuestion = (props) => {
           htmlFor='transportThestral'
         >
           <input
+            required=''
             className='formHat__tenQuestion--fieldsetInputs__label--option'
             type='radio'
             id='transportThestral'
@@ -86,6 +89,7 @@ const TenQuestion = (props) => {
           htmlFor='transportFlu'
         >
           <input
+            required=''
             className='formHat__tenQuestion--fieldsetInputs__label--option'
             type='radio'
             id='transportFlu'
@@ -106,6 +110,7 @@ const TenQuestion = (props) => {
           htmlFor='transportHippogriff'
         >
           <input
+            required=''
             className='formHat__tenQuestion--fieldsetInputs__label--option'
             type='radio'
             id='transportHippogriff'

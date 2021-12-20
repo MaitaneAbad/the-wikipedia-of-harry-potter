@@ -219,7 +219,7 @@
       &__label {
         border-radius: 10px;
         background-color: rgba(0, 0, 0, 0.884);
-        padding: 5px 10px;
+        padding: 5px;
         margin: 10px 0 35px 0;
         &--option {
           display: flex;
@@ -333,7 +333,7 @@
         padding: 5px;
         margin: 15px 0 5px 0;
         word-break: break-word;
-        min-width: 200px;
+        min-width: 170px;
         &--option {
           display: flex;
           margin: auto;
@@ -386,7 +386,7 @@
       column-gap: 40px;
       &__label {
         word-break: break-word;
-        min-width: 200px;
+        min-width: 170px;
         border-radius: 10px;
         background-color: rgba(0, 0, 0, 0.884);
         padding: 5px;
@@ -585,7 +585,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(#c7c40085, #be282888);
+  background: linear-gradient(#a7aa0285, #9e020288);
   max-width: 100vw;
   z-index: 0;
   &__window {
@@ -601,12 +601,15 @@
       border-radius: 20px;
       background-image: url(../../images/backgroundGryffindor.jpg);
       background-size: cover;
-      background-position: center;
-      //opacity: 0.85;
       box-shadow: 5px 5px 10px #565656;
       margin: 10px;
       max-width: 50vw;
-
+      @media (min-width: 1024px) {
+        max-width: 55vw;
+      }
+      @media (min-width: 1400px) {
+        max-width: 40vw;
+      }
       &__header {
         display: flex;
         justify-content: space-between;
@@ -620,8 +623,9 @@
           color: #fff;
           text-shadow: 1px 1px 2px #000;
           text-transform: uppercase;
+          font-size: 0.9rem;
           @media (min-width: 425px) {
-            font-size: 1.5rem;
+            font-size: 1.55rem;
           }
         }
         &--close {
@@ -633,9 +637,13 @@
           align-items: center;
           transition: all 0.5s ease;
           color: #fff;
+          margin-left: 1rem;
+          font-size: 18px;
+          &:hover {
+            font-size: 19px;
+          }
           @media (min-width: 425px) {
             margin-left: 2rem;
-            font-size: 18px;
           }
         }
       }
@@ -652,10 +660,18 @@
           }
         }
         &--paragraph {
-          font-size: 1.8rem;
-          line-height: 35px;
+          font-size: 1.15rem;
+          @media (min-width: 450px) {
+            font-size: 1.2rem;
+          }
           @media (min-width: 768px) {
-            font-size: 2.1rem;
+            font-size: 1.55rem;
+          }
+          @media (min-width: 1024px) {
+            font-size: 1.8rem;
+          }
+          @media (min-width: 1400px) {
+            font-size: 2.2rem;
           }
         }
       }
@@ -671,7 +687,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(#81818085, #195a0888);
+  background: linear-gradient(#5c5f5c85, #12640188);
   max-width: 100vw;
   z-index: 0;
   &__window {
@@ -681,34 +697,37 @@
     align-items: center;
     max-width: 90vw;
     opacity: unset;
-    padding: 100px;
     &--content {
       text-align: center;
       padding: 1.5rem;
       border-radius: 20px;
       background-image: url(../../images/backgroundSlytherin.jpg);
       background-size: cover;
-      background-position: center;
-      //opacity: 0.85;
       box-shadow: 5px 5px 10px #565656;
       margin: 10px;
-      max-width: 75vw;
-      color: white;
+      max-width: 50vw;
+      @media (min-width: 1024px) {
+        max-width: 55vw;
+      }
+      @media (min-width: 1400px) {
+        max-width: 40vw;
+      }
       &__header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 1rem;
         padding-bottom: 0.5rem;
         border-bottom: 3px double #fff;
         text-shadow: 1px 1px 2px #fff;
-        margin: 1rem auto;
-        width: 70vw;
+
         &--title {
           color: #fff;
           text-shadow: 1px 1px 2px #000;
           text-transform: uppercase;
+          font-size: 0.9rem;
           @media (min-width: 425px) {
-            font-size: 1.5rem;
+            font-size: 1.55rem;
           }
         }
         &--close {
@@ -720,9 +739,13 @@
           align-items: center;
           transition: all 0.5s ease;
           color: #fff;
+          margin-left: 1rem;
+          font-size: 18px;
+          &:hover {
+            font-size: 19px;
+          }
           @media (min-width: 425px) {
             margin-left: 2rem;
-            font-size: 18px;
           }
         }
       }
@@ -734,14 +757,23 @@
             width: 100px;
             margin: 10px 20px 10px 10px;
           }
+          @media (min-width: 768px) {
+            width: 150px;
+          }
         }
         &--paragraph {
-          font-size: 1.1rem;
+          font-size: 1.15rem;
           @media (min-width: 450px) {
             font-size: 1.2rem;
           }
           @media (min-width: 768px) {
-            font-size: 1.4rem;
+            font-size: 1.55rem;
+          }
+          @media (min-width: 1024px) {
+            font-size: 1.8rem;
+          }
+          @media (min-width: 1400px) {
+            font-size: 2.2rem;
           }
         }
       }
@@ -757,7 +789,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(#c7c40085, #184aee88);
+  background: linear-gradient(#55555585, #03015c88);
   max-width: 100vw;
   z-index: 0;
   &__window {
@@ -773,17 +805,20 @@
       border-radius: 20px;
       background-image: url(../../images/backgroundRavenclaw.jpg);
       background-size: cover;
-      background-position: center;
-      //opacity: 0.85;
       box-shadow: 5px 5px 10px #565656;
       margin: 10px;
       max-width: 50vw;
-      color: white;
+      @media (min-width: 1024px) {
+        max-width: 55vw;
+      }
+      @media (min-width: 1400px) {
+        max-width: 40vw;
+      }
       &__header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 1rem;
+        margin-bottom: 1rem;
         padding-bottom: 0.5rem;
         border-bottom: 3px double #fff;
         text-shadow: 1px 1px 2px #fff;
@@ -792,8 +827,9 @@
           color: #fff;
           text-shadow: 1px 1px 2px #000;
           text-transform: uppercase;
+          font-size: 0.9rem;
           @media (min-width: 425px) {
-            font-size: 1.5rem;
+            font-size: 1.55rem;
           }
         }
         &--close {
@@ -805,9 +841,13 @@
           align-items: center;
           transition: all 0.5s ease;
           color: #fff;
+          margin-left: 1rem;
+          font-size: 18px;
+          &:hover {
+            font-size: 19px;
+          }
           @media (min-width: 425px) {
             margin-left: 2rem;
-            font-size: 18px;
           }
         }
       }
@@ -824,10 +864,18 @@
           }
         }
         &--paragraph {
-          font-size: 1.8rem;
-          line-height: 35px;
+          font-size: 1.15rem;
+          @media (min-width: 450px) {
+            font-size: 1.2rem;
+          }
           @media (min-width: 768px) {
-            font-size: 2.1rem;
+            font-size: 1.55rem;
+          }
+          @media (min-width: 1024px) {
+            font-size: 1.8rem;
+          }
+          @media (min-width: 1400px) {
+            font-size: 2.2rem;
           }
         }
       }
@@ -843,7 +891,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(#362c0c85, #dac40388);
+  background: linear-gradient(#08080885, #9fa10488);
   max-width: 100vw;
   z-index: 0;
   &__window {
@@ -859,12 +907,15 @@
       border-radius: 20px;
       background-image: url(../../images/backgroundHufflepuff.jpg);
       background-size: cover;
-      background-position: center;
-      //opacity: 0.85;
       box-shadow: 5px 5px 10px #565656;
       margin: 10px;
       max-width: 50vw;
-      color: white;
+      @media (min-width: 1024px) {
+        max-width: 55vw;
+      }
+      @media (min-width: 1400px) {
+        max-width: 40vw;
+      }
       &__header {
         display: flex;
         justify-content: space-between;
@@ -878,8 +929,9 @@
           color: #fff;
           text-shadow: 1px 1px 2px #000;
           text-transform: uppercase;
+          font-size: 0.9rem;
           @media (min-width: 425px) {
-            font-size: 1.5rem;
+            font-size: 1.55rem;
           }
         }
         &--close {
@@ -891,9 +943,13 @@
           align-items: center;
           transition: all 0.5s ease;
           color: #fff;
+          margin-left: 1rem;
+          font-size: 18px;
+          &:hover {
+            font-size: 19px;
+          }
           @media (min-width: 425px) {
             margin-left: 2rem;
-            font-size: 18px;
           }
         }
       }
@@ -910,10 +966,18 @@
           }
         }
         &--paragraph {
-          font-size: 1.8rem;
-          line-height: 35px;
+          font-size: 1.15rem;
+          @media (min-width: 450px) {
+            font-size: 1.2rem;
+          }
           @media (min-width: 768px) {
-            font-size: 2.1rem;
+            font-size: 1.55rem;
+          }
+          @media (min-width: 1024px) {
+            font-size: 1.8rem;
+          }
+          @media (min-width: 1400px) {
+            font-size: 2.2rem;
           }
         }
       }
