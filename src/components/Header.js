@@ -3,6 +3,7 @@ import { useState } from 'react';
 import '../styles/layout/header.scss';
 import Menu from './Menu';
 import MenuButton from './MenuButton';
+import ButtonScroll from './ButtonScroll';
 const Header = () => {
   const [open, setOpen] = useState(false);
   const handleClick = () => {
@@ -22,6 +23,7 @@ const Header = () => {
           title='La wiki de Harry Potter'
         />
       </div>
+      <ButtonScroll />
     </header>
   );
 };

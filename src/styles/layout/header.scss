@@ -64,3 +64,35 @@
     }
   }
 }
+
+.scroll {
+  font-size: 25px;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  background-color: rgba(240, 248, 255, 0.25);
+  box-shadow: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 18px;
+  transition: all 400ms ease-out;
+  &:hover {
+    box-shadow: 0 -8px 10px #949393f8;
+  }
+  @media (min-width: 1024px) {
+    width: 58px;
+    height: 58px;
+    font-size: 25px;
+  }
+}
+.hidden {
+  height: 0;
+  margin-bottom: 0px;
+  overflow: hidden;
+}

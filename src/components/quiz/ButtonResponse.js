@@ -1,9 +1,9 @@
 const ButtonResponse = (props) => {
   return (
     <input
-      type='button'
+      type='submit'
       value='Revelio'
-      className='button'
+      className='formHat__buttonRevelio'
       onClick={props.handleButton}
     />
   );
