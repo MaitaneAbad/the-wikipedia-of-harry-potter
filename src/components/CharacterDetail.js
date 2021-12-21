@@ -5,6 +5,7 @@ import bus from '../images/nightBus.gif';
 
 const CharacterDetail = (props) => {
   if (props.character !== undefined) {
+    window.scrollTo(0, 0);
     return (
       <section className='characterDetail'>
         <Link to='/'>
@@ -116,6 +117,7 @@ const CharacterDetail = (props) => {
       </section>
     );
   } else {
+    window.scrollTo(0, document.body.scrollHeight);
     return <PageNotFound />;
   }
 };
