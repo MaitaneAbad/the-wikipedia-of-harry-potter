@@ -47,7 +47,7 @@ const CharacterDetail = (props) => {
             </div>
             <div className='characterDetail--section__detail--sectionBlood'>
               <article className='characterDetail--section__detail--sectionBlood__container'>
-                Blood{' '}
+                Estatus de sangre{' '}
                 <p className='characterDetail--section__detail--sectionBlood__container--title'>
                   {props.character.blood}
                 </p>
@@ -88,7 +88,7 @@ const CharacterDetail = (props) => {
             </div>
             <div className='characterDetail--section__detail--sectionHouse'>
               <article className='characterDetail--section__detail--sectionHouse__container'>
-                Howarts house{' '}
+                Casa
                 <p className='characterDetail--section__detail--sectionHouse__container--option'>
                   {props.character.howartsHouse === '' ? (
                     <span className='characterDetail--section__detail--sectionHouse__container--option__title'>
