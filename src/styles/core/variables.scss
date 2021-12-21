@@ -1,0 +1,41 @@
+@-webkit-keyframes bg-pan-tr {
+  0% {
+    background-position: 0 100%;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+@keyframes bg-pan-tr {
+  0% {
+    background-position: 0 100%;
+  }
+  100% {
+    background-position: 50% 0;
+  }
+}
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}

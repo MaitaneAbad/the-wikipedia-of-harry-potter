@@ -1,7 +1,50 @@
 .pageNotFound {
   background-image: url(../../images/passage.jpg);
-  min-width: 100vw;
+  max-width: 100vw;
   min-height: 100vh;
-  background-size: contain;
+  background-size: cover;
   box-sizing: border-box;
+  color: white;
+  background-repeat: no-repeat;
+  background-position: top center;
+  -webkit-animation: bg-pan-tr 10s both;
+  animation: bg-pan-tr 10s both;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-transform: uppercase;
+  align-items: center;
+
+  &__paragraph {
+    margin: 25px;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.521);
+    width: 70vw;
+    border-radius: 20px;
+    padding: 10px;
+    @media (min-width: 1024px) {
+      width: 70vw;
+      margin: 25px auto;
+    }
+  }
+  &__back {
+    width: 50vw;
+    padding: 10px;
+    border-radius: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 25px 60px;
+    background-color: rgba(0, 0, 0, 0.521);
+    -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+      both;
+    animation: text-focus-in 5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    &--img {
+      width: 100px;
+      @media (min-width: 768px) {
+        width: 300px;
+      }
+    }
+  }
 }
