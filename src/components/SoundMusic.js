@@ -12,7 +12,6 @@ const SoundMusic = (
       <Sound
         url={Song}
         playStatus={Sound.status.PLAYING}
-        playFromPosition={300}
         onLoading={handleSongLoading}
         onPlaying={handleSongPlaying}
         onFinishedPlaying={handleSongFinishedPlaying}

@@ -53,6 +53,7 @@ const App = () => {
   return (
     <div>
       <Header />
+      <SoundMusic />
       <Switch>
         <Route path='/quiz'>
           <QuizHat />
@@ -63,7 +64,6 @@ const App = () => {
         </Route>
         <Route exact path='/'>
           <main className='main'>
-            <SoundMusic />
             <Form searchName={searchName} handleSearchName={handleSearchName} />
             <CharacterList data={filteredCharacter} searchName={searchName} />
             <FormButton data={filteredCharacter} id='quiz' />
