@@ -9,6 +9,7 @@ import Footer from './Footer';
 import FormButton from './FormButton';
 import QuizHat from './QuizHat';
 import CharacterDetail from './CharacterDetail';
+import SoundMusic from './SoundMusic.js';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -62,6 +63,7 @@ const App = () => {
         </Route>
         <Route exact path='/'>
           <main className='main'>
+            <SoundMusic />
             <Form searchName={searchName} handleSearchName={handleSearchName} />
             <CharacterList data={filteredCharacter} searchName={searchName} />
             <FormButton data={filteredCharacter} id='quiz' />
