@@ -2,8 +2,20 @@ import { Link } from 'react-router-dom';
 import PageNotFound from './PageNotFound';
 import '../styles/layout/characterDetail.scss';
 import bus from '../images/nightBus.gif';
+import CharacterHistory from './CharacterHistory';
 
 const CharacterDetail = (props) => {
+  console.log(props.character.history);
+
+  const a = props.character.history.map((characterHistory, i) => {
+    console.log(characterHistory);
+    return (
+      <li className='' key={i}>
+        <CharacterHistory characterHistory={characterHistory} />
+      </li>
+    );
+  });
+
   if (props.character !== undefined) {
     window.scrollTo(0, 0);
     return (
@@ -114,6 +126,9 @@ const CharacterDetail = (props) => {
             </div>
           </section>
         </div>
+        <article className='characterDetail__containerHistory'>
+          <ul>{a}</ul>
+        </article>
       </section>
     );
   } else {

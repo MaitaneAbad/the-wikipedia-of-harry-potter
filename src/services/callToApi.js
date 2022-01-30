@@ -1,6 +1,7 @@
 const callToApi = () => {
   return fetch(`https://maitaneabad.github.io/api-harry-potter/api/data.json`)
     .then((response) => response.json())
+
     .then((json) => {
       const characters = json.characters.map((data) => {
         return {
@@ -9,7 +10,6 @@ const callToApi = () => {
           nickName: data.nickname,
           maritalStatus: data.maritalStatus,
           blood: data.blood,
-          children: data.children,
           descriptionBreed: data.physicalDescription.breed,
           descriptionGenres: data.physicalDescription.genres,
           descriptionHairColour: data.physicalDescription.hairColour,
@@ -17,11 +17,10 @@ const callToApi = () => {
           img: data.img,
           howartsHouse: data.howartsHouse,
           patronus: data.patronus,
-          petName: data.pet,
+          history: data.history.split('. '),
         };
       });
       console.log(characters);
-
       return characters;
     });
 };

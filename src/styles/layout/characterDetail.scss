@@ -226,4 +226,13 @@
       }
     }
   }
+  &__containerHistory {
+    margin: 75px 150px;
+    @media (min-width: 768px) {
+      font-size: 35px;
+    }
+    @media (min-width: 1024px) {
+      font-size: 45px;
+    }
+  }
 }

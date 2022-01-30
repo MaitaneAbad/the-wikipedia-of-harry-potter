@@ -13,7 +13,7 @@ const SoundMusic = (
         url={Song}
         playStatus={Sound.status.PLAYING}
         onLoading={handleSongLoading}
-        onPlaying={handleSongPlaying}
+        //  onPlaying={handleSongPlaying}
         onFinishedPlaying={handleSongFinishedPlaying}
       />
     </div>
