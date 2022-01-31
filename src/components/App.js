@@ -10,10 +10,14 @@ import FormButton from './FormButton';
 import QuizHat from './QuizHat';
 import CharacterDetail from './CharacterDetail';
 import SoundMusic from './SoundMusic.js';
+import ls from '../services/localStorage.js';
 
 const App = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(ls.get('data', []));
   const [searchName, setSearchName] = useState('');
+  useEffect(() => {
+    ls.set('data', data);
+  }, [data]);
 
   useEffect(() => {
     callToApi().then((response) => {

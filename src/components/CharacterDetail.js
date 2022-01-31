@@ -5,10 +5,7 @@ import bus from '../images/nightBus.gif';
 import CharacterHistory from './CharacterHistory';
 
 const CharacterDetail = (props) => {
-  console.log(props.character.history);
-
   const a = props.character.history.map((characterHistory, i) => {
-    console.log(characterHistory);
     return (
       <li className='' key={i}>
         <CharacterHistory characterHistory={characterHistory} />
