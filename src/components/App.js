@@ -15,6 +15,7 @@ import ls from '../services/localStorage.js';
 const App = () => {
   const [data, setData] = useState(ls.get('data', []));
   const [searchName, setSearchName] = useState('');
+
   useEffect(() => {
     ls.set('data', data);
   }, [data]);

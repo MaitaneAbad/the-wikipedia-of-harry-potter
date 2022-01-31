@@ -1,17 +1,20 @@
 import { Link } from 'react-router-dom';
 import PageNotFound from './PageNotFound';
+import Footer from './Footer';
 import '../styles/layout/characterDetail.scss';
 import bus from '../images/nightBus.gif';
 import CharacterHistory from './CharacterHistory';
 
 const CharacterDetail = (props) => {
-  const a = props.character.history.map((characterHistory, i) => {
-    return (
-      <li className='' key={i}>
-        <CharacterHistory characterHistory={characterHistory} />
-      </li>
-    );
-  });
+  const historyCharacter = props.character.history.map(
+    (characterHistory, i) => {
+      return (
+        <li className='' key={i}>
+          <CharacterHistory characterHistory={characterHistory} />
+        </li>
+      );
+    }
+  );
 
   if (props.character !== undefined) {
     window.scrollTo(0, 0);
@@ -124,8 +127,14 @@ const CharacterDetail = (props) => {
           </section>
         </div>
         <article className='characterDetail__containerHistory'>
-          <ul>{a}</ul>
+          <h3 className='characterDetail__containerHistory--title'>
+            Conóceme un poco más:
+          </h3>
+          <ul className='characterDetail__containerHistory--list'>
+            {historyCharacter}
+          </ul>
         </article>
+        <Footer />
       </section>
     );
   } else {

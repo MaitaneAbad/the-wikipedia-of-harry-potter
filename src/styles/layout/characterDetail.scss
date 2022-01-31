@@ -3,6 +3,7 @@
   background-image: url(../../images/parchemntDetail.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 
   font-size: 23px;
   @media (min-width: 768px) {
@@ -227,12 +228,37 @@
     }
   }
   &__containerHistory {
-    padding: 75px 150px;
+    padding: 75px 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 28px;
     @media (min-width: 768px) {
       font-size: 35px;
     }
     @media (min-width: 1024px) {
       font-size: 45px;
+    }
+    &--title {
+      width: 75%;
+      text-transform: uppercase;
+      text-shadow: 0 1px 0 #ddd, 0 1px 0 #ccc, 0 1px 0 #bbb, 0 2px 0 #aaa,
+        0 2px 0 #acacac, 0 6px 1px rgba(0, 0, 0, 0.1),
+        0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3),
+        0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+      border-bottom: 2px black solid;
+      margin-bottom: 25px;
+      padding-bottom: 10px;
+    }
+    &--list {
+      color: rgb(255, 255, 255);
+      word-spacing: 5px;
+      letter-spacing: 5px;
+      width: 75%;
+      &__paragraph {
+        margin: 15px 0;
+      }
     }
   }
 }
