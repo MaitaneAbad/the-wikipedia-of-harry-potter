@@ -128,7 +128,7 @@ const CharacterDetail = (props) => {
         </div>
         <article className='characterDetail__containerHistory'>
           <h3 className='characterDetail__containerHistory--title'>
-            Conóceme un poco más:
+            Conócele un poco más:
           </h3>
           <ul className='characterDetail__containerHistory--list'>
             {historyCharacter}
